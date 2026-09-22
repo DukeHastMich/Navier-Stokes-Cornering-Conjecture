@@ -4752,3 +4752,251 @@ Every budget derived so far can be made mutually compatible at the level of scal
 This is an important stopping criterion for this line of attack: **more algebraic scale bookkeeping is unlikely to produce a Millennium proof without a genuinely new Navier–Stokes-specific estimate.** The next useful theorem would have to control repeated circulation amplification, the stochastic back-to-label area distortion, or the normalized strain impulse itself.
 
 This conclusion is consistent with the modern Type-II literature rather than contradicting it. A recent reference is G. Seregin, *On potential Type II blowups for the Navier-Stokes equations*, arXiv:2606.29468 (2026).
+
+# CHECKPOINT 91 — Coherent stretching does not amplify tube circulation
+
+The checkpoint-88 Type-II adversary treated `Gamma_{n+1}=m Gamma_n` as an available degree of freedom. The first question is whether ordinary vortex stretching can actually provide that growth.
+
+Consider the aligned parallel-tube reduction
+
+\[
+\omega=\zeta(x_\perp,t)e_z,
+\qquad
+u=(v_\perp(x_\perp,t),\sigma(t)z),
+\qquad
+\nabla_\perp\cdot v_\perp=-\sigma.
+\]
+
+The axial vorticity equation is
+
+\[
+\partial_t\zeta+v_\perp\cdot\nabla\zeta
+=
+\sigma\zeta+\nu\Delta_\perp\zeta.
+\]
+
+Using `div_perp v_perp=-sigma`, this becomes the conservation law
+
+\[
+\boxed{
+\partial_t\zeta+\nabla_\perp\cdot(v_\perp\zeta)
+=
+\nu\Delta_\perp\zeta.
+}
+\]
+
+Integrating over the entire transverse plane and using decay at infinity gives
+
+\[
+\boxed{
+\frac{d}{dt}\Gamma(t)=0,
+\qquad
+\Gamma=\int_{\mathbb R^2}\zeta\,dA.
+}
+\]
+
+Thus in this exact coherent-tube reduction, axial stretching can increase peak vorticity by reducing transverse area, but it cannot increase circulation.
+
+The radial Gaussian case makes the separation especially transparent:
+
+\[
+\zeta(r,t)=\frac{\Gamma}{\pi b(t)}e^{-r^2/b(t)},
+\qquad
+\dot b=-\sigma(t)b+4\nu,
+\]
+
+with constant `Gamma`. Checkpoint 91 drove this model with strongly time-dependent strain; the core width varied strongly and the peak vorticity changed by more than an order of magnitude while numerical quadrature preserved circulation to `~3.4e-7` relative error.
+
+**Consequence.** The `m>1` circulation escalation of checkpoint 88 is not produced by ordinary stretching of one isolated coherent tube. It requires flux exchange, recruitment, reconnection, or loss of tube identity.
+
+# CHECKPOINT 92 — Nested one-sign flux cannot increase inward
+
+For an aligned one-sign core,
+
+\[
+\Gamma(R)=2\pi\int_0^R\zeta(r)r\,dr,
+\]
+
+so
+
+\[
+\boxed{
+\Gamma'(R)=2\pi R\zeta(R)\ge0.
+}
+\]
+
+A smaller nested cross-section therefore cannot contain more same-signed circulation than a larger one at the same instant.
+
+For a material radial boundary in the coherent parallel-tube equation, Reynolds transport applied to the conservative form gives
+
+\[
+\boxed{
+\frac{d\Gamma_R}{dt}
+=2\pi\nu R\partial_r\zeta(R,t).
+}
+\]
+
+For a monotone coherent core, `partial_r zeta <= 0`, so viscosity decreases the circulation enclosed by that material core boundary.
+
+Hence circulation growth along a putative lineage requires at least one of:
+
+- inward recruitment of circulation from outside the previous core;
+- a non-monotone or sign-changing layer;
+- reconnection/tube redefinition;
+- loss of coherent one-sign tube structure.
+
+This is a stronger restriction than the earlier same-time statement that vorticity flux is constant along a tube.
+
+# CHECKPOINT 93 — Kelvin gradient trap
+
+For a material loop `C(t)`, the exact viscous circulation law is
+
+\[
+\boxed{
+\frac{d\Gamma}{dt}
+=
+\nu\oint_{C(t)}\Delta u\cdot dx
+=
+-\nu\oint_{C(t)}(\nabla\times\omega)\cdot dx.
+}
+\]
+
+Suppose a loop of characteristic length `O(delta)` increases its circulation by an order-one fraction in one parent nonlinear time
+
+\[
+\tau_{nl}\sim\frac{\delta^2}{\Gamma}.
+\]
+
+A mean-value estimate then requires, at some instant,
+
+\[
+\boxed{
+\|\nabla\omega\|_{C}
+\gtrsim
+\frac{\Gamma^2}{\nu\delta^3}.
+}
+\]
+
+The natural parent vorticity scale is
+
+\[
+\Omega_\delta\sim\frac{\Gamma}{\delta^2}.
+\]
+
+Therefore the vorticity-gradient length
+
+\[
+\ell_{grad}\sim\frac{\Omega_\delta}{\|\nabla\omega\|}
+\]
+
+must satisfy
+
+\[
+\boxed{
+\frac{\ell_{grad}}{\delta}
+\lesssim
+\frac1{Re_\Gamma},
+\qquad Re_\Gamma=\frac{\Gamma}{\nu}.
+}
+\]
+
+The diffusion time on this new ruler is
+
+\[
+\tau_\nu(\ell_{grad})
+\sim\frac{\ell_{grad}^2}{\nu},
+\]
+
+hence
+
+\[
+\boxed{
+\frac{\tau_\nu(\ell_{grad})}{\tau_{nl}}
+\lesssim
+\frac1{Re_\Gamma}.
+}
+\]
+
+So the gradient layer needed to change circulation on the parent nonlinear clock diffuses `Re_Gamma` times faster than that clock.
+
+There is an additional scale trap. If that small ruler merely inherits the parent vorticity amplitude, its local circulation is
+
+\[
+\Gamma_\ell
+\sim
+\Omega_\delta\ell_{grad}^2
+\lesssim
+\frac{\nu}{Re_\Gamma},
+\]
+
+so
+
+\[
+\boxed{Re_\ell\lesssim Re_\Gamma^{-1}.}
+\]
+
+It is strongly diffusive. To promote it into a next-generation vortex with
+
+\[
+Re_{next}=mRe_\Gamma
+\]
+
+requires a vorticity-amplitude boost of order
+
+\[
+\boxed{mRe_\Gamma^2.}
+\]
+
+Thus the formal circulation-amplifying cascade of checkpoint 88 hides a second, much more severe escalation: before `Gamma` can increase on the natural nonlinear time, the flow must create a sublayer of thickness `delta/Re`; before that sublayer can become the next high-Re vortex, its vorticity amplitude must increase by `~Re^2`.
+
+This is not yet a contradiction because a Type-II solution is permitted to develop unbounded normalized gradients and strain. It does, however, remove the interpretation of `m>1` as a free scale-to-scale parameter.
+
+# CHECKPOINT 94 — Merger/recruitment reservoir
+
+If circulation growth is obtained not by changing one material-loop circulation but by aggregating signed flux from other structures,
+
+\[
+\Gamma_{n+1}=m\Gamma_n,
+\]
+
+then the net recruited amount is
+
+\[
+\Delta\Gamma_n=(m-1)\Gamma_n.
+\]
+
+Summing gives the exact telescope
+
+\[
+\boxed{
+\sum_{k=0}^{N-1}\Delta\Gamma_k
+=\Gamma_N-\Gamma_0.
+}
+\]
+
+Therefore a merger-only mechanism with `Gamma_N -> infinity` requires an unbounded net signed-flux reservoir. Splitting and re-merging the same signed flux cannot multiply the total.
+
+A conditional packing argument removes one simple way of storing that reservoir. Suppose the initial vorticity is `C^1`, donor tubes are isolated by low-vorticity gaps of comparable width, and their cross-sectional geometries have bounded eccentricity. If `r` is a donor radius and `K=||grad omega_0||_inf`, isolation gives peak vorticity `O(Kr)`, while cross-sectional area is `O(r^2)`. Hence
+
+\[
+\Gamma_{donor}=O(Kr^3).
+\]
+
+Pairwise-disjoint comparable neighborhoods in bounded volume satisfy `sum r^3 < infinity`, so the total circulation of such isolated donors is finite.
+
+This is a **conditional coherent-tube packing lemma**, not a theorem covering arbitrary Navier–Stokes geometry. Its escape is precisely the geometry that has been haunting the project all along: dense non-isolated clusters, sheets, sign changes, or repeated reconnection where separate tube identity ceases to be meaningful.
+
+That escape cannot be dismissed by assigning a fixed cost to each reconnection. Enciso, Lucà and Peralta-Salas constructed global smooth Navier–Stokes solutions with arbitrarily complicated finite cascades of vortex reconnections at arbitrarily prescribed small times. Thus finite reconnection complexity is compatible with complete regularity.
+
+Reference: A. Enciso, R. Lucà, D. Peralta-Salas, *Vortex reconnection in the three dimensional Navier–Stokes equations*, Advances in Mathematics 309 (2017), 452–486, DOI `10.1016/j.aim.2017.01.025`.
+
+## Status after checkpoint 94
+
+The checkpoint-90 Type-II corridor has been split into two concrete branches:
+
+1. **same-lineage circulation growth** must be mediated by viscosity and therefore pass the Kelvin gradient trap, creating a `delta/Re` layer whose inherited local Reynolds number is only `O(1/Re)`;
+2. **merger/recruitment growth** must import unbounded net signed circulation and cannot obtain it from a finite collection of isolated comparable coherent tubes.
+
+The remaining adversary is therefore no longer a single coherent vortex tube. It is a dense, non-isolated, multiscale cluster that repeatedly changes tube identity while simultaneously creating gradient layers much thinner than the parent core and amplifying vorticity strongly enough to keep those layers at high Reynolds number.
+
+This is a materially narrower mechanism than the free `Gamma_n=m^n` scaling of checkpoint 88, but it is not yet ruled out by a global PDE estimate.

@@ -1,0 +1,13 @@
+Checkpoint 91 - coherent parallel tube: stretching changes peak vorticity, not total circulation
+
+Exact reduction:
+  zeta_t + div_perp(v_perp zeta) = nu Delta_perp zeta
+  Gamma(t)=int_R2 zeta dA, hence dGamma/dt=0 under decay at infinity.
+For radial linear strain, b'=-sigma(t)b+4nu and zeta=Gamma/(pi b) exp(-r^2/b).
+
+time-dependent test: nu=0.02, Gamma=3, b0=0.8, T=12
+b range: 0.0440661734 .. 0.8
+peak-vorticity range: 1.19366207 .. 21.6703559
+max numerical circulation relative error: 3.404e-07
+
+Conclusion: within this exact coherent-tube reduction, axial stretching can make omega arbitrarily larger by shrinking the core, but cannot make Gamma or Re_Gamma grow. The m>1 Type-II corridor therefore cannot be realized by ordinary stretching of one isolated coherent tube.

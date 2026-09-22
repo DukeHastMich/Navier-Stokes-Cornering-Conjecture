@@ -84,3 +84,13 @@ The next run tested whether repeated creation of a smaller ruler can escape the 
 Using the Constantin–Iyer statistical Kelvin theorem to walk a small high-circulation loop backward converts the same escape into a requirement of rapidly growing stochastic back-to-label area distortion. That requirement also remains algebraically compatible with the Type-II toy cascade.
 
 So checkpoint 90 marks a deliberate boundary: further progress needs a genuinely Navier–Stokes-specific estimate, not another dimensional budget inequality. See `docs/checkpoints/checkpoint_87_90_STATUS.md`.
+
+## Latest incremental checkpoint: 91–94
+
+The circulation-amplifying Type-II escape was attacked directly rather than treated as a free scaling parameter.
+
+For an exact aligned coherent-tube reduction, stretching changes core width and peak vorticity while preserving total circulation. A monotone one-sign material core also loses enclosed circulation under viscosity rather than gaining it. If a material loop nevertheless increases circulation by an order-one fraction on its nonlinear time, the viscous Kelvin law forces a new vorticity-gradient ruler of size roughly `delta/Re_Gamma`; at inherited amplitude that ruler has only `Re ~ 1/Re_parent`, and promoting it to the next high-Re generation requires a vorticity boost of order `Re_parent^2`.
+
+If circulation growth is instead produced by mergers, the added signed flux must be recruited from elsewhere; splitting and re-merging the same flux cannot multiply it. Under explicit isolated/coherent donor assumptions, a smooth bounded-gradient initial field cannot preload an infinite comparable donor reservoir in bounded volume.
+
+The surviving mechanism is therefore no longer an isolated vortex tube. It is a dense non-isolated multiscale cluster with repeated flux recruitment/reconnection and sub-core gradient creation. See `docs/checkpoints/checkpoint_91_94_STATUS.md`.

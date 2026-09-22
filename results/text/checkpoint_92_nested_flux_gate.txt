@@ -1,0 +1,12 @@
+Checkpoint 92 - nested one-sign circulation gate
+
+For zeta>=0, Gamma(R)=2pi int_0^R zeta r dr has Gamma'(R)=2pi R zeta(R)>=0.
+Therefore a smaller nested cross-section cannot have larger same-signed circulation at one instant.
+For a boundary advected by the transverse flow in the coherent parallel-tube equation:
+  d Gamma_R/dt = 2 pi nu R partial_r zeta(R,t).
+For a monotone core partial_r zeta<=0, so viscosity makes the material-core circulation nonincreasing.
+
+Gaussian test: min dGamma/dR=0, max=2.05045
+Gaussian material viscous circulation rate: min=-0.12613, max=-0
+
+Escape requirement: Gamma growth along a supposed lineage requires flux recruitment from outside the previous core, a non-monotone/sign-changing boundary layer, or reconnection/redefinition of the tube. Pure stretching of the same one-sign coherent core cannot supply m>1.

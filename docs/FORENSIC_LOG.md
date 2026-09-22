@@ -709,3 +709,52 @@ Artifacts:
 - `src/checkpoint_90_cascade_consistency.py`
 - corresponding text/CSV outputs
 - `docs/checkpoints/checkpoint_87_90_STATUS.md`
+
+## CHECKPOINTS 91–94 — circulation jugular run
+
+### Checkpoint 91: coherent-tube circulation conservation
+Derived the exact parallel-tube conservation form
+
+`zeta_t + div_perp(v_perp zeta) = nu Delta_perp zeta`
+
+and hence `d/dt int zeta dA = 0` for decaying fields. A time-dependent Gaussian/Burgers-type test changed peak vorticity by >10x while preserving numerical circulation to ~`3.4e-7` relative quadrature error.
+
+Interpretation: ordinary stretching of one coherent isolated tube does not realize the `Gamma_{n+1}>Gamma_n` assumption used by the checkpoint-88 abstract Type-II cascade.
+
+### Checkpoint 92: nested one-sign gate
+For aligned `zeta>=0`, `Gamma'(R)=2 pi R zeta(R)>=0`, so smaller nested cross-sections do not contain larger same-signed circulation at one instant. For a material radial boundary in the coherent reduction,
+
+`d Gamma_R/dt = 2 pi nu R partial_r zeta`.
+
+A monotone outward-decaying core therefore loses circulation viscously rather than gaining it.
+
+### Checkpoint 93: Kelvin gradient trap
+Used the exact viscous material-loop circulation law
+
+`dGamma/dt = nu int_C Delta u.dx = -nu int_C curl(omega).dx`.
+
+If an O(1) fractional increase in Gamma occurs in `tau_nl~delta^2/Gamma` with loop length O(delta), then somewhere on the loop
+
+`|grad omega| >= O(Gamma^2/(nu delta^3))`.
+
+Relative to parent `Omega~Gamma/delta^2`, this forces a new gradient ruler `ell/delta <= O(1/Re_Gamma)`. Its viscous time is shorter than the parent nonlinear time by O(1/Re). At inherited parent amplitude the subscale has `Re_ell~O(1/Re_parent)`. Promoting it to a next-generation high-Re vortex with `Re_next=m Re_parent` requires an omega-amplitude boost O(`m Re_parent^2`).
+
+This is a new mechanism-level obstruction: circulation amplification cannot be treated as a free multiplier. It first creates an even smaller, strongly diffusive layer.
+
+### Checkpoint 94: merger/recruitment reservoir
+If circulation growth is instead done by mergers, `Delta Gamma_n=(m-1)Gamma_n` telescopes to `Gamma_N-Gamma_0`; unbounded child circulation requires unbounded net signed-flux recruitment. Splitting/re-merging the same flux does not multiply it.
+
+Added a conditional smooth isolated-donor packing lemma: with bounded `||grad omega_0||_inf`, donor tubes isolated by low-vorticity gaps of comparable size, and bounded cross-section geometry, a donor of radius r has `Gamma=O(r^3)`. Disjoint comparable neighborhoods in bounded volume therefore carry finite total recruitable circulation.
+
+This does not cover dense clusters, sheets, sign-changing geometry, or repeated reconnection. Literature check retained the Enciso–Lucà–Peralta-Salas 2017 result: smooth global Navier-Stokes solutions can exhibit arbitrarily complicated finite reconnection cascades, so reconnection cannot be assigned a universal fixed per-event energy toll.
+
+### Status
+No proof claimed. The checkpoint-90 Type-II corridor is narrower: same-lineage amplification is pushed into a `delta/Re` gradient layer with `Re_sub~1/Re`, while merger-only amplification needs an unbounded net flux reservoir and therefore a non-isolated multiscale cluster if isolated donor packing is excluded.
+
+Artifacts:
+- `src/checkpoint_91_coherent_tube_circulation.py`
+- `src/checkpoint_92_nested_flux_gate.py`
+- `src/checkpoint_93_kelvin_gradient_trap.py`
+- `src/checkpoint_94_merger_reservoir.py`
+- corresponding text/CSV outputs
+- `docs/checkpoints/checkpoint_91_94_STATUS.md`

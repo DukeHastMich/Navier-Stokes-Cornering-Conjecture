@@ -1,0 +1,21 @@
+Checkpoint 93 - Kelvin gradient trap for circulation amplification
+
+Exact viscous Kelvin law for a material loop:
+  dGamma/dt = nu integral_C Delta u . dx = -nu integral_C curl(omega) . dx.
+If an O(1) fractional circulation increase occurs in tau_nl~delta^2/Gamma while loop length is O(delta), then
+  ||grad omega||_loop >= O(Gamma^2/(nu delta^3)).
+With Omega~Gamma/delta^2, the corresponding gradient length obeys
+  ell_grad/delta <= O(1/Re_Gamma).
+Its diffusion time is shorter than the parent nonlinear time by the same factor:
+  tau_nu(ell_grad)/tau_nl <= O(1/Re_Gamma).
+At the parent vorticity amplitude, that subscale has
+  Re_ell ~ O(1/Re_parent),
+so it is strongly diffusive, not a new high-Re vortex.
+To turn it into a next-generation vortex with Re_next=m Re_parent requires an amplitude multiplication O(m Re_parent^2).
+
+Re=10, m=2: ell/delta~0.1, inherited Re_ell~0.1, required omega boost~200, log boost~5.3
+Re=100, m=2: ell/delta~0.01, inherited Re_ell~0.01, required omega boost~2e+04, log boost~9.9
+Re=1000, m=2: ell/delta~0.001, inherited Re_ell~0.001, required omega boost~2e+06, log boost~14.5
+Re=10000, m=2: ell/delta~0.0001, inherited Re_ell~0.0001, required omega boost~2e+08, log boost~19.1
+
+Interpretation: the formal m>1 cascade cannot amplify circulation on the parent nonlinear clock without first generating an even thinner, faster-diffusing gradient layer. If that layer is promoted to the next high-Re generation, its vorticity amplitude must jump by ~Re^2. This does not prove impossibility, but it converts circulation amplification into an explicit nested-scale/strain escalation rather than a free cascade parameter.

@@ -1,0 +1,16 @@
+Checkpoint 94 - merger/recruitment accounting after same-tube amplification is removed
+
+If Gamma_{n+1}=m Gamma_n is produced only by merging/recruiting signed vortex flux, then
+  Delta Gamma_n=(m-1)Gamma_n,
+and the cumulative net recruited circulation telescopes to
+  sum Delta Gamma = Gamma_N-Gamma_0.
+Thus Gamma_N->infinity requires an unbounded net signed-flux reservoir; splitting and re-merging the same flux cannot multiply it.
+
+Conditional smooth-isolated donor lemma: if ||grad omega_0||_infty=K and each distinct donor tube of radius r is isolated by a low-vorticity gap of comparable width, then its peak vorticity is O(Kr), and bounded cross-section geometry gives Gamma=O(K r^3). Pairwise-disjoint comparable neighborhoods in bounded volume have sum r^3<infinity, hence finite total recruitable circulation.
+This closes an infinite merger tree made of isolated coherent donor tubes under those geometry/isolation assumptions.
+
+But it is NOT unconditional. The escape is a dense/non-isolated cluster, sheet, sign-changing region, or repeated viscous reconnection where the notion of separate donor tubes breaks down. Rigorous Navier-Stokes reconnection results show that arbitrarily complicated FINITE reconnection cascades can occur in completely smooth solutions, so reconnection itself cannot be assigned a universal fixed energy toll.
+
+m=2: generation 18 needs Gamma/Gamma0=262144 and at least 262144 comparable base donors in a merger-only tree.
+m=3: generation 18 needs Gamma/Gamma0=3.8742e+08 and at least 3.8742e+08 comparable base donors in a merger-only tree.
+m=4: generation 18 needs Gamma/Gamma0=6.87195e+10 and at least 6.87195e+10 comparable base donors in a merger-only tree.

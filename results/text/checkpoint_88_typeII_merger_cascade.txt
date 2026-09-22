@@ -1,0 +1,24 @@
+Checkpoint 88 - abstract circulation-aggregation / Type-II cascade stress test
+Algebraic adversary only; NOT a constructed Navier-Stokes solution.
+
+Assume Gamma_n=m^n Gamma_0 and delta_n=q^n delta_0 with m>1, 0<q<1.
+Using the bounded-geometry core floor y_n=(a_n/delta_n)^2 ~ 1/Re_n gives a_n/delta_n ~ m^{-n/2}.
+One-scale proxies then obey:
+  tau_{n+1}/tau_n = q^2/m
+  E_{n+1}/E_n ~ D_{n+1}/D_n = m^2 q
+  critical L3/circulation amplitude Gamma_{n+1}/Gamma_n = m
+
+Therefore there is a NONEMPTY formal finite-budget window
+  q < 1/m^2,
+in which Gamma_n -> infinity and a_n/delta_n -> 0, while both total Zeno time and the sum of the model stage-dissipation costs converge.
+This means the present energy + finite-core gates alone do NOT rule out a Type-II cascade that aggregates circulation while shrinking the active ruler faster than Gamma^{-2}.
+
+m=2: formal finite-budget window q < 0.25000000
+m=3: formal finite-budget window q < 0.11111111
+m=4: formal finite-budget window q < 0.06250000
+m=5: formal finite-budget window q < 0.04000000
+
+Representative m=2,q=0.20: energy/dissipation ratio per generation = 0.8, time ratio = 0.02, while Gamma doubles and relative core thickness falls by sqrt(2) each generation.
+At the boundary q=1/4, the per-generation energy proxy is constant, so an infinite sequence with a comparable dissipation toll would exhaust finite energy; strict q<1/4 is needed in this model.
+
+Interpretation: the surviving algebraic monster is unambiguously Type II. It must increase a critical amplitude while making each new ruler dramatically smaller. This is consistent with Seregin's theorem that true finite-time blowup requires ||u||_L3 -> infinity; it does not provide such a blowup construction.

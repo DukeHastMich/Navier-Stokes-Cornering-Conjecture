@@ -73,3 +73,14 @@ A_\delta Re_\delta\,\frac{a^2}{\delta^2}\ge c_\nu
 \]
 
 whenever the relative core thickness is actually decreasing. A remote pusher at distance `d` therefore needs, schematically, `Re_source ≳ (d/a)^2`; if it avoids that amplitude growth by moving to `d=O(a)`, then `a` has become the new renormalization scale. See `docs/checkpoints/checkpoint_84_86_STATUS.md`.
+
+## Latest incremental checkpoint: 87–90
+
+The next run tested whether repeated creation of a smaller ruler can escape the finite-core gate without immediately contradicting energy or dissipation. Two useful facts emerged:
+
+- an instantaneous coherent vortex tube carries the same vorticity flux through every cross-section, so changing ruler inside the same tube does not itself increase `Gamma/nu`;
+- nevertheless, an abstract **circulation-amplifying Type-II cascade** can satisfy all of the reduced scale/core/energy/Zeno-time budgets derived so far if the active ruler shrinks sufficiently rapidly (`q < 1/m^2` in the toy generation law).
+
+Using the Constantin–Iyer statistical Kelvin theorem to walk a small high-circulation loop backward converts the same escape into a requirement of rapidly growing stochastic back-to-label area distortion. That requirement also remains algebraically compatible with the Type-II toy cascade.
+
+So checkpoint 90 marks a deliberate boundary: further progress needs a genuinely Navier–Stokes-specific estimate, not another dimensional budget inequality. See `docs/checkpoints/checkpoint_87_90_STATUS.md`.

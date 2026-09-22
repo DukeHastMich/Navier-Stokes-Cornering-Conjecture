@@ -131,3 +131,63 @@ Several attractive arguments were explicitly rejected during the run:
 - an early `checkpoint_74` shrinking-reach claim — retracted after finding a reach-diagnostic bug and inadequate core resolution.
 
 Preserving these failures is part of the research record.
+
+## 11. Same-tube scale changes do not create larger circulation
+
+At any fixed time, `div omega=0` implies that the vorticity flux through every cross-section of one coherent vortex tube is the same. Therefore merely discovering a smaller geometric ruler inside the same instantaneous tube does not increase `Re_Gamma=Gamma/nu`.
+
+A divergence-free axisymmetric flux-function example in checkpoint 87 numerically preserved unit cross-sectional flux to about `1e-10` while the tube radius varied substantially.
+
+This does **not** imply that a tube's strength is constant in time under viscosity. It means only that spatial renormalization inside the same coherent tube cannot by itself generate the unbounded critical circulation required by the remaining escape route.
+
+## 12. The present budget method admits a formal Type-II escape
+
+Checkpoint 88 stress-tests the remaining mechanism using an abstract circulation-amplifying cascade
+
+\[
+\Gamma_n=m^n\Gamma_0,
+\qquad
+\delta_n=q^n\delta_0.
+\]
+
+With the bounded-geometry core floor `a_n^2/delta_n^2 ~ 1/Re_n`, the model gives
+
+\[
+\tau_{n+1}/\tau_n=q^2/m,
+\qquad
+E_{n+1}/E_n\sim m^2q.
+\]
+
+Hence there is a nonempty formal window `q<1/m^2` in which the circulation Reynolds number diverges and the relative core thickness vanishes, while the Zeno-time sum and the reduced per-generation energy/dissipation proxy both converge.
+
+This is **not** a Navier–Stokes blowup construction. It is a failed-proof result: energy/core/time scaling alone does not eliminate the final Type-II possibility.
+
+## 13. Stochastic Kelvin backtracking turns circulation growth into an area-distortion requirement
+
+Constantin–Iyer's statistical Kelvin theorem gives
+
+\[
+\Gamma_t(C)=\mathbb E\,\Gamma_0(A_t(C)).
+\]
+
+For a current loop of scale `delta`, bounded initial vorticity and the area formula imply schematically
+
+\[
+\mathbb E K_2
+\gtrsim
+\frac{|\Gamma_t(C_\delta)|}{\|\omega_0\|_\infty\delta^2},
+\]
+
+where `K_2` is the two-dimensional area stretch of the stochastic back-to-label map. Thus a small loop carrying growing circulation must have stochastic preimages with rapidly growing area distortion.
+
+For `Gamma_delta ~ delta^{-p}`, the required mean area stretch grows at least like `delta^{-(2+p)}`. This precisely formalizes the earlier idea of “walking the singularity backward,” but it does not yet produce a contradiction.
+
+## 14. Current stopping point for this proof route
+
+Combining the abstract Type-II cascade with the backward-area gate still leaves a nonempty formal parameter window. For example, `m=2,q=.20` has a reduced stage-cost ratio `.8`, Zeno-time ratio `.02`, and requires a normalized strain impulse of only about `1.956` per generation to meet the uniform backward-area bound.
+
+Therefore the current line of attack has reached a genuine strategic boundary:
+
+> another algebraic scale budget is unlikely to finish the problem. A further advance requires a Navier–Stokes-specific estimate limiting repeated circulation amplification, stochastic back-to-label area distortion, or the normalized strain impulse through an infinite Type-II cascade.
+
+This conclusion is consistent with the rigorous requirement that any genuine finite-time blowup must have `||u(t)||_L3 -> infinity` and with current work on potential Type-II blowup scenarios.

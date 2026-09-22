@@ -1,36 +1,30 @@
-# Incremental update — Checkpoints 84–86
+# Checkpoint 87–90 incremental update
 
-Baseline: `22ce932` — Initial research snapshot: Failure to Corner  
-Commit: `aa504c0` — Checkpoint 84-86: reduce escape variables to a core gate
+Base commit: `aa504c0`  
+New commit: `a8466c7` — **Checkpoint 87-90: isolate the Type-II escape window**
 
-## Main changes
+## Main findings
 
-- Derives the necessary coherent-core gate `A_delta Re_delta y >= c_nu` whenever `y=a^2/delta^2` is nonincreasing.
-- Shows the two former escape variables are coupled: if `a/delta -> 0`, their product must diverge at least like `1/y`.
-- Derives remote-pusher scaling `Re_source ≳ (d/a)^2` up to model geometry constants.
-- Connects the `Re_delta` escape heuristically to critical `L^3` amplitude, while explicitly retaining the distinction from a full PDE theorem.
-- Instruments the corrected closed-relay model to compare stretching at the shrinking ruler, within `2 delta`, and globally.
-- Adds a three-resolution/core sweep and records that nonlocal/outsourced stretching improves the gate, while the relay still loses its collapsing cyclic state.
-- Freezes `MANIFEST.md` explicitly as the initial-release manifest so later incremental commits do not pretend to preserve those original hashes.
+- Same coherent instantaneous vortex tube: `div omega=0` fixes the vorticity flux/circulation across cross-sections, so changing ruler inside one tube does not itself increase `Gamma/nu`.
+- An abstract circulation-amplifying cascade `Gamma_n=m^n`, `delta_n=q^n` has a nonempty formal finite-budget window `q<1/m^2`; current scale/core/energy/Zeno-time inequalities alone therefore do not rule out Type-II escape.
+- Constantin–Iyer statistical Kelvin backtracking converts small-scale growing circulation into a rapidly growing stochastic back-to-label area-distortion requirement.
+- Combining the backward-area requirement with the other reduced gates still leaves a formal Type-II parameter window. The next advance requires a genuinely NSE-specific estimate rather than another dimensional budget.
 
 ## Apply
 
-Preferred Git-native application from the repository root:
+Preferred:
 
 ```bash
-git am Navier-Stokes-Cornering-Conjecture-update-84-86.patch
+git am Navier-Stokes-Cornering-Conjecture-update-87-90.patch
+git push
 ```
 
-Or copy the delta ZIP contents over the repository and commit manually.
+Alternatively overlay the ZIP contents onto the repository, then:
 
-## Verification
-
-The local repository passed:
-
-```text
-python tools/verify_repo.py
-Compiled 19/19 scripts.
-
-git diff --check
-# clean
+```bash
+git add .
+git commit -m "Checkpoint 87-90: isolate the Type-II escape window"
+git push
 ```
+
+All 23 checkpoint Python scripts compile and `git diff --check` passed before packaging.

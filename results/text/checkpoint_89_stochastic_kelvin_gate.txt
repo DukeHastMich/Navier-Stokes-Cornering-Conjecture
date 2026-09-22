@@ -1,0 +1,28 @@
+Checkpoint 89 - walking the small-circulation loop backward (stochastic Kelvin gate)
+Necessary bookkeeping derived from the Constantin-Iyer statistical Kelvin representation; NOT a new regularity theorem.
+
+For a current loop C_delta spanning O(delta^2), statistical Kelvin gives
+  Gamma_t(C_delta) = E[ Gamma_0(A_t(C_delta)) ].
+If M0=||omega_0||_infty, Stokes plus the area formula give schematically
+  |Gamma_t| <= M0*pi*delta^2 E[K2],
+so
+  E[K2] >= |Gamma_t|/(M0*pi*delta^2),
+where K2 is the two-dimensional area distortion of the stochastic back-to-label map.
+
+Thus a current small-scale loop with growing circulation cannot appear from a bounded backward geometry: its stochastic preimages must, on average, span rapidly growing area. In an incompressible flow this is the backward-area / forward-stretch version of the same strain mechanism.
+If a deterministic pathwise bound K2<=exp(2J) is available, J must satisfy J >= (1/2)log K2_required. In the genuinely stochastic formula only an exponential-moment requirement follows without further assumptions.
+
+For Gamma_delta ~ delta^{-p}, the required area stretch scales as delta^{-(2+p)}.
+  p=0.00: K2_required ~ delta^(-2.00)
+  p=0.10: K2_required ~ delta^(-2.10)
+  p=0.25: K2_required ~ delta^(-2.25)
+  p=0.50: K2_required ~ delta^(-2.50)
+
+For an m-fold aggregation with scale ratio q, each generation needs backward area amplification at least m/q^2. The corresponding uniform-strain impulse floor is
+  J_generation >= 0.5 log(m/q^2) = -log q + 0.5 log m.
+  m=2, q=0.200: area factor=50, J>=1.95601, pure contraction log(1/q)=1.60944, extra=0.346574
+  m=2, q=0.100: area factor=200, J>=2.64916, pure contraction log(1/q)=2.30259, extra=0.346574
+  m=3, q=0.080: area factor=468.75, J>=3.07503, pure contraction log(1/q)=2.52573, extra=0.549306
+  m=4, q=0.040: area factor=2500, J>=3.91202, pure contraction log(1/q)=3.21888, extra=0.693147
+
+Crucially, this still does not kill the Type-II cascade: one-scale strain sigma~Gamma/delta^2 acting for tau~delta^2/Gamma already supplies O(1) strain impulse per generation, and a geometry coefficient large enough could meet the logarithmic gate. The backward calculation therefore identifies what must diverge/deform, but does not close the theorem.

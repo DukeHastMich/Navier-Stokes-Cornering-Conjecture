@@ -1,0 +1,28 @@
+Checkpoint 90 - combined abstract escape-window audit
+Algebraic consistency test only; NOT a Navier-Stokes solution or existence result.
+
+Conditions tested:
+  finite model dissipation/energy series: m^2 q < 1
+  finite Zeno time: q^2/m < 1
+  stochastic-Kelvin backward-area gate with available normalized strain impulse I: I >= 0.5 log(m/q^2)
+
+m=2:
+  I=1.0: no sampled q satisfies all three gates
+  I=2.0: nonempty formal window q in [0.193731, 0.245551] on sampled grid
+  I=3.0: nonempty formal window q in [0.0707444, 0.245551] on sampled grid
+  I=4.0: nonempty formal window q in [0.026349, 0.245551] on sampled grid
+m=3:
+  I=1.0: no sampled q satisfies all three gates
+  I=2.0: no sampled q satisfies all three gates
+  I=3.0: nonempty formal window q in [0.0879136, 0.10925] on sampled grid
+  I=4.0: nonempty formal window q in [0.0321033, 0.10925] on sampled grid
+m=4:
+  I=1.0: no sampled q satisfies all three gates
+  I=2.0: no sampled q satisfies all three gates
+  I=3.0: no sampled q satisfies all three gates
+  I=4.0: nonempty formal window q in [0.0368637, 0.0616087] on sampled grid
+
+Result: for sufficiently large but finite dimensionless strain impulse per generation, there remains a nonempty formal Type-II window satisfying every reduced budget derived so far. Example: m=2, q=0.20 needs J>=~1.956 per generation while its stage energy ratio is 0.8 and time ratio is 0.02.
+Therefore the present geometric/core/energy/stochastic-circulation bookkeeping has NOT slain the final beast. It has isolated a very specific adversary: a rapidly shrinking, circulation-amplifying Type-II cascade with O(1)-to-few units of normalized strain impulse every generation.
+
+What would be needed next: a true NSE estimate showing that such repeated circulation amplification/area distortion cannot occur indefinitely, or that the required normalized strain impulse cannot stay high enough while the scale-critical amplitude diverges. Without that new PDE estimate, continuing to add algebraic budget gates will only reparameterize the known Type-II difficulty.

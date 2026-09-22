@@ -1,0 +1,27 @@
+Checkpoint 87 - instantaneous vortex-tube flux inheritance
+Kinematic divergence-free example; NOT a Navier-Stokes time evolution.
+
+For any instantaneous vortex tube whose side surface is tangent to omega, div omega=0 implies equal vorticity flux through every cross-section.
+The toy field uses an axisymmetric flux function psi(r,z)=Gamma/(2pi)[1-exp(-(r/a(z))^2)].
+It narrows/widens with z while maintaining flux Gamma=1 across every transverse section.
+
+z=-3.00  a=0.18002248  flux=0.999999999909  omega_center=9.82192557
+z=-2.50  a=0.18009111  flux=0.999999999909  omega_center=9.81444173
+z=-2.00  a=0.18036842  flux=0.999999999909  omega_center=9.78428526
+z=-1.50  a=0.18147740  flux=0.999999999909  omega_center=9.66507025
+z=-1.00  a=0.18573242  flux=0.999999999909  omega_center=9.22730134
+z=-0.50  a=0.19978161  flux=0.999999999909  omega_center=7.97515449
+z=+0.00  a=0.23000000  flux=0.999999999909  omega_center=6.01720012
+z=+0.50  a=0.26021839  flux=0.999999999909  omega_center=4.70082583
+z=+1.00  a=0.27426758  flux=0.999999999909  omega_center=4.23156650
+z=+1.50  a=0.27852260  flux=0.999999999909  omega_center=4.10326207
+z=+2.00  a=0.27963158  flux=0.999999999909  omega_center=4.07078070
+z=+2.50  a=0.27990889  flux=0.999999999909  omega_center=4.06271847
+z=+3.00  a=0.27997752  flux=0.999999999909  omega_center=4.06072714
+
+max |flux-Gamma| = 9.074e-11
+
+Interpretation for the renormalization argument:
+  Merely choosing a smaller geometric ruler inside the SAME coherent instantaneous vortex tube does not manufacture a larger circulation Reynolds number Gamma/nu. The tube strength is the same across its sections.
+  Therefore a same-tube scale escape can reset the geometry coefficient A at a smaller ruler, but it does not by itself increase Re_Gamma.
+  To make Re_Gamma grow from generation to generation, the dynamics must change the tube strength in time, aggregate flux from other structures, or cease to admit a coherent-tube description.

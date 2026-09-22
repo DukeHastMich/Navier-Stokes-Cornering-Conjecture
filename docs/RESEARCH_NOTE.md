@@ -4396,3 +4396,359 @@ The project has now pushed the coherent-tube argument to a familiar hard boundar
 What remains is recognizably Type-II territory: a cascade whose critical amplitude becomes unbounded, whose active scale repeatedly changes, or whose vortex-tube description fails. This is not a global-regularity proof.
 
 A current literature anchor for the Type-II side is G. Seregin, *On potential Type II blowups for the Navier-Stokes equations*, arXiv:2606.29468 (2026), which studies potential Type-II scenarios using Euler rescaling and Liouville-type arguments.
+
+# CHECKPOINT 87 — Same-tube flux inheritance
+
+At a fixed time, let a coherent vortex tube be bounded laterally by a surface tangent to the vorticity field. Because
+
+\[
+\nabla\cdot\omega=0,
+\]
+
+the divergence theorem applied to the tube segment between two cross-sections gives
+
+\[
+\boxed{
+\int_{S_1}\omega\cdot n\,dS
+=
+\int_{S_2}\omega\cdot n\,dS
+=\Gamma.
+}
+\]
+
+This statement is kinematic. It does not require Kelvin's inviscid time-conservation theorem. At one instant, the vorticity flux/circulation is the same through every cross-section of the same vortex tube.
+
+A divergence-free axisymmetric test field was generated from the flux function
+
+\[
+\psi(r,z)
+=
+\frac{\Gamma}{2\pi}
+\left(1-e^{-(r/a(z))^2}\right).
+\]
+
+With
+
+\[
+\omega_r=-\frac1r\partial_z\psi,
+\qquad
+\omega_z=\frac1r\partial_r\psi,
+\]
+
+one has `div omega=0` identically. The numerical cross-sectional integral stayed equal to `Gamma=1` to approximately `1e-10` while the chosen radius `a(z)` changed significantly.
+
+### Consequence for the renormalization escape
+
+If a newly discovered smaller ruler is merely another cross-section or local geometric feature of the **same coherent instantaneous tube**, then
+
+\[
+Re_\Gamma=\frac{\Gamma}{\nu}
+\]
+
+does not increase merely because the ruler got smaller.
+
+Thus an infinite coherent cascade cannot evade the core gate simply by repeatedly saying “use a smaller delta” while leaving the same tube strength untouched. To make the critical circulation amplitude grow from generation to generation, at least one of the following must occur:
+
+1. the tube strength changes dynamically in time;
+2. vorticity flux is aggregated from other structures;
+3. the coherent-tube description fails through reconnection, cancellation, sheet/point geometry, etc.
+
+This narrows the `Re_delta -> infinity` branch but does not eliminate it.
+
+# CHECKPOINT 88 — An adversarial circulation-amplifying Type-II cascade
+
+To determine whether the remaining scale/energy/core budgets themselves forbid an increasing circulation Reynolds number, consider the abstract generation law
+
+\[
+\Gamma_n=m^n\Gamma_0,
+\qquad
+\delta_n=q^n\delta_0,
+\qquad m>1,
+\quad 0<q<1.
+\]
+
+This is **not asserted to be a Navier–Stokes solution**. It is an adversarial consistency test.
+
+Assume the best-case bounded-geometry finite-core relation
+
+\[
+y_n
+=
+\frac{a_n^2}{\delta_n^2}
+\sim
+\frac{c}{Re_n}
+\sim m^{-n}.
+\]
+
+Then
+
+\[
+\frac{a_n}{\delta_n}\sim m^{-n/2}\to0.
+\]
+
+A one-scale velocity and nonlinear time are
+
+\[
+U_n\sim\frac{\Gamma_n}{\delta_n},
+\qquad
+\tau_n\sim\frac{\delta_n^2}{\Gamma_n},
+\]
+
+so
+
+\[
+\frac{\tau_{n+1}}{\tau_n}
+=
+\frac{q^2}{m}<1.
+\]
+
+The usual vortex-scale energy proxy is
+
+\[
+E_n\sim\Gamma_n^2\delta_n,
+\]
+
+up to geometry and slender-core logarithms. Under the core-floor relation, the model dissipation paid over one nonlinear generation has the same leading exponential scaling. Therefore
+
+\[
+\frac{E_{n+1}}{E_n}
+\sim m^2q.
+\]
+
+This produces a nonempty formal window
+
+\[
+\boxed{q<m^{-2}}
+\]
+
+in which
+
+\[
+\Gamma_n\to\infty,
+\qquad
+\frac{a_n}{\delta_n}\to0,
+\]
+
+while both
+
+\[
+\sum_n\tau_n<\infty
+\]
+
+and the model sum of stage dissipation/energy proxies converge.
+
+A logarithmic thin-filament factor, for example `log(delta_n/a_n) ~ O(n)`, does not close this window: an `O(n)` factor remains summable against `(m^2q)^n` when `m^2q<1`.
+
+For `m=2`, the formal window is
+
+\[
+q<\frac14.
+\]
+
+The representative choice `q=.20` has
+
+\[
+\frac{E_{n+1}}{E_n}=0.8,
+\qquad
+\frac{\tau_{n+1}}{\tau_n}=0.02,
+\qquad
+\frac{Re_{n+1}}{Re_n}=2.
+\]
+
+### Meaning
+
+This is a negative result for the current proof strategy:
+
+> finite energy, finite total dissipation, finite Zeno time, and the finite-core floor do not by themselves contradict an abstract Type-II circulation-amplifying cascade.
+
+It is not evidence that such a Navier–Stokes solution exists. It shows that another purely dimensional budget inequality is unlikely to finish the problem.
+
+The critical amplitude behaves as
+
+\[
+\|u\|_{L^3,\mathrm{one\ scale}}
+\sim\Gamma_n\to\infty,
+\]
+
+which is exactly compatible with Seregin's rigorous necessary condition for genuine finite-time blowup:
+
+\[
+\lim_{t\uparrow T}\|u(t)\|_{L^3}=\infty.
+\]
+
+# CHECKPOINT 89 — Walking the high-circulation small loop backward
+
+The Constantin–Iyer stochastic-Lagrangian formulation supplies a useful way to make the earlier “walk the singularity backward” question precise.
+
+For a smooth deterministic Navier–Stokes solution and a closed loop `C`, their statistical Kelvin theorem gives
+
+\[
+\boxed{
+\oint_C u(t)\cdot dx
+=
+\mathbb E
+\left[
+\oint_{A_t(C)}u_0\cdot dx
+\right],
+}
+\]
+
+where `A_t` is the stochastic back-to-label map.
+
+Let `C_delta` bound a current spanning surface `S_delta` with area `O(delta^2)`, and set
+
+\[
+M_0=\|\omega_0\|_\infty.
+\]
+
+For each stochastic realization, `A_t(C_delta)` bounds the mapped surface `A_t(S_delta)`. Stokes' theorem and the area formula imply
+
+\[
+\left|
+\oint_{A_t(C_\delta)}u_0\cdot dx
+\right|
+\le
+M_0\operatorname{Area}(A_t(S_\delta)).
+\]
+
+If
+
+\[
+K_2
+=
+\sup_{x\in S_\delta}
+\|\wedge^2\nabla A_t(x)\|,
+\]
+
+then
+
+\[
+\operatorname{Area}(A_t(S_\delta))
+\le
+K_2\operatorname{Area}(S_\delta),
+\]
+
+and consequently
+
+\[
+\boxed{
+|\Gamma_t(C_\delta)|
+\lesssim
+M_0\delta^2\,\mathbb E K_2.
+}
+\]
+
+Thus
+
+\[
+\boxed{
+\mathbb E K_2
+\gtrsim
+\frac{|\Gamma_t(C_\delta)|}{M_0\delta^2}.
+}
+\]
+
+A small current loop carrying growing circulation therefore requires stochastic backward preimages with rapidly growing expected area distortion.
+
+If
+
+\[
+\Gamma_\delta\sim\delta^{-p},
+\]
+
+then necessarily
+
+\[
+\mathbb E K_2
+\gtrsim
+\delta^{-(2+p)}.
+\]
+
+For a uniform deterministic strain-integral control `J`, a standard deformation-gradient bound has the schematic form
+
+\[
+K_2\lesssim e^{2J},
+\]
+
+so one would need
+
+\[
+J\gtrsim\frac12\log K_{2,\rm required}.
+\]
+
+For the genuinely stochastic representation, the rigorous implication without extra assumptions is weaker: the corresponding exponential moment of pathwise deformation must become large. We do **not** replace that statement by a deterministic pointwise bound.
+
+Reference: P. Constantin and G. Iyer, *A stochastic Lagrangian representation of the three-dimensional incompressible Navier–Stokes equations*, Comm. Pure Appl. Math. 61 (2008), 330–345, DOI `10.1002/cpa.20192`.
+
+# CHECKPOINT 90 — The stochastic-backward gate still leaves a formal Type-II window
+
+For the adversarial aggregation law
+
+\[
+\Gamma_{n+1}=m\Gamma_n,
+\qquad
+\delta_{n+1}=q\delta_n,
+\]
+
+the backward-area requirement scales generation-to-generation as
+
+\[
+\frac{K_{2,n+1}}{K_{2,n}}
+\gtrsim
+\frac{m}{q^2}.
+\]
+
+A uniform strain impulse `I` per generation would therefore need
+
+\[
+\boxed{
+I\ge
+\frac12\log\frac{m}{q^2}
+=
+-\log q+\frac12\log m.
+}
+\]
+
+This says that pure geometric contraction contributes the `-log q` part, while amplification of circulation adds an additional `0.5 log m` area-distortion requirement.
+
+The combined parameter sweep imposed:
+
+\[
+m^2q<1
+\]
+
+for a summable model stage-dissipation/energy sequence,
+
+\[
+q^2/m<1
+\]
+
+for finite Zeno time, and
+
+\[
+I\ge\frac12\log(m/q^2)
+\]
+
+for the backward-area gate.
+
+A nonempty formal region remains for finite `I`. For example,
+
+\[
+m=2,
+\qquad q=.20,
+\qquad I_{\min}\approx1.956.
+\]
+
+Therefore the stochastic circulation reconstruction does not close the reduced Type-II loophole either.
+
+## Status after checkpoint 90
+
+The current geometric program has isolated a specific final adversary rather than disproved it:
+
+> a rapidly shrinking Type-II cascade in which the critical circulation/amplitude increases from generation to generation, the active ruler shrinks faster than approximately `Gamma^{-2}`, and each generation sustains order-one-to-few units of normalized strain/area-distortion impulse.
+
+Every budget derived so far can be made mutually compatible at the level of scaling algebra.
+
+This is an important stopping criterion for this line of attack: **more algebraic scale bookkeeping is unlikely to produce a Millennium proof without a genuinely new Navier–Stokes-specific estimate.** The next useful theorem would have to control repeated circulation amplification, the stochastic back-to-label area distortion, or the normalized strain impulse itself.
+
+This conclusion is consistent with the modern Type-II literature rather than contradicting it. A recent reference is G. Seregin, *On potential Type II blowups for the Navier-Stokes equations*, arXiv:2606.29468 (2026).

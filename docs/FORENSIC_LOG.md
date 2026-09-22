@@ -675,3 +675,37 @@ Artifacts:
 - `src/checkpoint_86_escape_gate_sweep.py`
 - corresponding CSV/text outputs
 - `docs/checkpoints/checkpoint_84_86_STATUS.md`
+
+## CHECKPOINTS 87–90 — same-tube flux, abstract Type-II escape, stochastic Kelvin backtracking
+
+### Same-tube flux inheritance
+Used the exact kinematic fact `div omega=0`: an instantaneous coherent vortex tube has the same vorticity flux/circulation through every cross-section. Built a divergence-free axisymmetric flux-function example with varying radius; numerical cross-sectional flux remained `1` to ~`1e-10`.
+
+Consequence: choosing a smaller ruler inside the same coherent instantaneous tube does not by itself increase `Re_Gamma=Gamma/nu`. Critical-amplitude growth between generations must come from time-dependent tube-strength change, aggregation of other flux, or failure of coherent-tube identity.
+
+### Abstract Type-II adversary
+Stress-tested the remaining budgets with `Gamma_n=m^n`, `delta_n=q^n`, and bounded-geometry core floor `y_n~1/Re_n`. Derived:
+- relative core ratio `a_n/delta_n ~ m^{-n/2}`;
+- nonlinear time ratio `q^2/m`;
+- model stage energy/dissipation ratio `m^2 q`.
+
+Found a nonempty formal finite-budget window `q<1/m^2`. Example `m=2,q=.20`: Gamma doubles, relative core thins by `sqrt(2)`, time ratio `.02`, stage-cost ratio `.8`. This is not an NSE construction; it demonstrates that existing scale/core/energy budgets do not themselves contradict an unbounded Type-II cascade.
+
+### Stochastic Kelvin backtracking
+Literature check verified Constantin–Iyer statistical Kelvin formula `circulation_t(C)=E[circulation_0(A_t(C))]`. Combining it with Stokes and the area formula yields the necessary schematic gate `E[K2] >= Gamma_delta/(||omega_0||_inf * C delta^2)` for the stochastic back-to-label 2-area distortion.
+
+For `Gamma_delta~delta^{-p}`, required mean area distortion grows like `delta^{-(2+p)}`. For an `m`-fold circulation increase and scale ratio `q`, per-generation area amplification must be at least `m/q^2`, corresponding under a uniform strain bound to `I >= .5 log(m/q^2)`.
+
+### Combined consistency sweep
+Combined finite model dissipation, finite Zeno time, and backward-area impulse. A nonempty formal window remains for finite order-one-to-few normalized strain impulse. Example `m=2,q=.20` requires `I>=1.956` while retaining cost ratio `.8` and time ratio `.02`.
+
+### Status correction / strategic boundary
+No proof claimed. The run identified an honest limitation of the current program: algebraic budget gates alone can be satisfied by a circulation-amplifying Type-II scaling. Further progress needs a new PDE-specific estimate controlling repeated circulation amplification, back-to-label area distortion, or normalized strain impulse. Continuing to stack only dimensional inequalities would reparameterize rather than solve the known Type-II difficulty.
+
+Artifacts:
+- `src/checkpoint_87_vortex_flux_inheritance.py`
+- `src/checkpoint_88_typeII_merger_cascade.py`
+- `src/checkpoint_89_stochastic_kelvin_gate.py`
+- `src/checkpoint_90_cascade_consistency.py`
+- corresponding text/CSV outputs
+- `docs/checkpoints/checkpoint_87_90_STATUS.md`

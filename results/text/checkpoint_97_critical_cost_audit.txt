@@ -1,0 +1,15 @@
+Checkpoint 97 - critical cost audit of nested helper ladder
+
+R0=1e+04: levels=6, sum(Eproxy)=1e+08, sum(Dproxy)=10001, sum(Iproxy)=10000, sum(tau)=0.000101163
+  ratios to first level: E=1, D=1.0001, I=1, time=1.01163
+R0=1e+08: levels=7, sum(Eproxy)=1e+16, sum(Dproxy)=1e+08, sum(Iproxy)=1e+08, sum(tau)=1.0001e-08
+  ratios to first level: E=1, D=1, I=1, time=1.0001
+R0=1e+16: levels=8, sum(Eproxy)=1e+32, sum(Dproxy)=1e+16, sum(Iproxy)=1e+16, sum(tau)=1e-16
+  ratios to first level: E=1, D=1, I=1, time=1
+R0=1e+32: levels=9, sum(Eproxy)=1e+64, sum(Dproxy)=1e+32, sum(Iproxy)=1e+32, sum(tau)=1e-32
+  ratios to first level: E=1, D=1, I=1, time=1
+
+Result: the nested ladder is dominated by its outer level in these standard scale proxies. The helper hierarchy does not create a new divergent energy, impulse, dissipation-per-stage, or time series by itself.
+This is exactly what critical scaling allows. It is a failed-obstruction result, not evidence that a true Navier-Stokes cascade exists.
+
+Important consequence: checkpoint 93 remains a valid conditional statement at fixed inherited amplitude, but its interpretation as a likely fatal Re^2 promotion cost is too strong. A dense Type-II mechanism can interpose diffusion-compatible intermediate layers and use them as transient transfer machinery rather than demanding that the thinnest Kelvin layer immediately become the next high-Re primary vortex.

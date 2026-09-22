@@ -244,3 +244,57 @@ The free `Gamma_n=m^n` Type-II toy cascade has been demoted from a plausible one
 - repeatedly recruit new signed flux through mergers/reconnection, requiring an unbounded reservoir and loss of isolated coherent-tube geometry.
 
 The remaining object is therefore a dense, non-isolated, multiscale cluster that simultaneously changes topology, creates ever thinner gradient layers, and boosts vorticity strongly enough to keep those layers at high local Reynolds number.
+
+## 19. Diffusion-compatible circulation transfer weakens the one-step Kelvin-layer obstruction
+
+Checkpoint 93's gradient estimate remains valid, but its most aggressive interpretation does not. A local heat-step calculation shows that a circulation-transfer layer persisting for one parent nonlinear time can have
+
+\[
+h/\delta\sim Re^{-1/2},
+\qquad
+\Delta\Omega/\Omega_p\sim Re^{1/2},
+\qquad
+Re_h\sim Re^{1/2}.
+\]
+
+Thus the `delta/Re` layer with local `Re~1/Re_parent` is the inherited-amplitude case, not a universal fate. A stronger intermediate layer can remain at high Reynolds number.
+
+## 20. A square-root Reynolds hierarchy formally bridges the Kelvin scales
+
+The recursion
+
+\[
+Re_{j+1}=\sqrt{Re_j},
+\qquad
+\delta_{j+1}=\delta_j/\sqrt{Re_j}
+\]
+
+gives
+
+\[
+Re_j=Re_0^{2^{-j}},
+\qquad
+\delta_j=\delta_0Re_0^{-(1-2^{-j})}.
+\]
+
+Hence the direct `delta/Re` ruler can be approached through only `O(log log Re)` intermediate diffusion-compatible layers. Reduced energy, dissipation, impulse, and time proxies remain dominated by the outer level.
+
+This is not a Navier–Stokes singular solution. It is a counterexample to the claim that the present Kelvin-gradient/core budget necessarily becomes inconsistent before reaching the critical ruler.
+
+## 21. Current proof-route boundary
+
+The accumulated work supports a qualified geometric statement: coherent self-closing mechanisms are depleted or finite-core constrained. It does **not** establish that every unforced flow must stay regular.
+
+The surviving dense/reconnecting Type-II mechanism must escape bounded renormalized state space by making a scale-critical quantity unbounded. This is precisely the regime left open by the present arguments and required by established blowup criteria such as the divergence of the critical `L^3` velocity norm.
+
+Accordingly, further rescaling of the same energy/core/circulation estimates is not expected to close the Millennium problem. A new Navier–Stokes-specific critical estimate is required.
+
+## 22. Final verdict of the current research program
+
+**Not proved:** global regularity of 3-D unforced incompressible Navier–Stokes.
+
+**Substantially supported/conditionally established in the reduced framework:** a vortex cannot obtain runaway amplification merely from the same coherent local geometry that smoothly closes its own near-contact; bounded finite-core relays also fail to remain arbitrarily filamentary under the tested/derived assumptions.
+
+**Still open:** a dense non-isolated, topology-changing, unbounded Type-II critical cascade. Checkpoints 95–97 show that the final Kelvin-gradient escape can be threaded through a short hierarchy of diffusion-compatible intermediate Reynolds scales without violating the reduced budgets.
+
+This is the stopping point for the current “failure to corner” proof route.

@@ -5000,3 +5000,109 @@ The checkpoint-90 Type-II corridor has been split into two concrete branches:
 The remaining adversary is therefore no longer a single coherent vortex tube. It is a dense, non-isolated, multiscale cluster that repeatedly changes tube identity while simultaneously creating gradient layers much thinner than the parent core and amplifying vorticity strongly enough to keep those layers at high Reynolds number.
 
 This is a materially narrower mechanism than the free `Gamma_n=m^n` scaling of checkpoint 88, but it is not yet ruled out by a global PDE estimate.
+
+---
+
+## Checkpoints 95–98 — final adversarial audit of the Kelvin-gradient route
+
+### Checkpoint 95: diffusion-compatible circulation transfer weakens the one-step gradient trap
+
+The Kelvin-gradient estimate from checkpoint 93 is still correct:
+
+\[
+|\nabla\omega|\gtrsim \frac{\Gamma^2}{\nu\delta^3}
+\]
+
+for order-one material-loop circulation change on a parent nonlinear time, under the stated `O(delta)` loop-length assumption.
+
+The earlier discussion then converted this to a thickness `ell~delta/Re` by assuming that the jump across the layer stayed at the parent vorticity amplitude `Omega_p~Gamma/delta^2`. That is one legitimate case, but it is not the only diffusion-compatible case.
+
+Use the exact one-dimensional heat-step solution as a local adversarial model. A vorticity jump `A` across an interface transports, per unit tangential length,
+
+\[
+Q(\tau)=A\sqrt{\frac{\nu\tau}{\pi}}.
+\]
+
+For `Delta Gamma~Gamma`, tangential length `L~delta`, and
+
+\[
+\tau_p\sim\frac{\delta^2}{\Gamma},
+\]
+
+we obtain
+
+\[
+\frac{h}{\delta}\sim Re^{-1/2},
+\qquad
+\frac{A}{\Omega_p}\sim Re^{1/2},
+\qquad
+Re_h\sim Re^{1/2}.
+\]
+
+Thus a layer that persists diffusively over the full parent nonlinear time can remain at intermediate high Reynolds number. This directly prevents us from treating the checkpoint-93 `Re_ell~1/Re_parent` estimate as a universal fate of circulation-transfer layers.
+
+### Checkpoint 96: square-root Reynolds hierarchy
+
+The relations above close under iteration:
+
+\[
+R_{j+1}=R_j^{1/2},
+\qquad
+\delta_{j+1}=\delta_j R_j^{-1/2}.
+\]
+
+Hence
+
+\[
+R_j=R_0^{2^{-j}},
+\qquad
+\delta_j=\delta_0R_0^{-(1-2^{-j})},
+\]
+
+so the hierarchy tends toward the direct `delta_0/Re_0` ruler while passing through only `O(log log Re_0)` intermediate diffusion-compatible layers.
+
+This is a particularly important failed-obstruction result. It shows that the thin Kelvin ruler does not have to be reached in one impossible-looking jump; at the scaling level it can be approached by a short nested chain of progressively smaller, progressively lower-Re structures.
+
+### Checkpoint 97: critical budget audit
+
+With the standard reduced proxies
+
+\[
+E\sim\Gamma^2\delta,
+\quad
+D\sim\nu\Gamma\delta,
+\quad
+I\sim\Gamma\delta^2,
+\quad
+\tau\sim\delta^2/\Gamma,
+\]
+
+the helper hierarchy is dominated by its outermost scale. No new divergent sum appears merely from inserting the intermediate layers.
+
+Therefore neither the energy identity nor the previously used finite-core scaling creates a contradiction for the hierarchy. This is consistent with the critical character of 3-D Navier–Stokes.
+
+### Checkpoint 98: stopping boundary
+
+At this point the surviving mechanism must make a scale-critical quantity unbounded. This is not an accidental weakness of the notation: full-PDE theory already identifies that regime as the necessary location of any hypothetical singularity. Seregin's `L^3` necessary blowup condition, Tao's quantitative critical bounds, Miller's critical middle-strain criteria, and current Type-II analyses all point to the same boundary.
+
+A related warning comes from model equations: preserving energy cancellation, enstrophy identities, or strain constraints is not by itself enough to guarantee regularity. Blowup is known in carefully modified/strain-only model systems that retain substantial pieces of the Navier–Stokes structure. Therefore the present geometric identities cannot be promoted to a global theorem without a new estimate using structure that those models do not share.
+
+### Final status of the “failure to corner” program
+
+The project has succeeded in narrowing and stress-testing the original intuition. It has **not** proved the Millennium problem.
+
+The strongest defensible conclusion is:
+
+> Coherent local self-closing vortex mechanisms are strongly geometrically depleted, and bounded finite-core renormalized relays cannot sustain an arbitrarily thin collapse. Any remaining singular mechanism must abandon that regime and enter an unbounded, dense, non-isolated Type-II cascade in which a scale-critical amplitude escapes every bounded renormalized description used here.
+
+The final escape is not eliminated by the current toolkit. Checkpoints 95–97 provide an explicit reduced multiscale bridge showing why the Kelvin-gradient argument cannot finish it.
+
+For this reason the current route is marked **analytically exhausted**. A future continuation should begin only from a new critical estimate—for example a bound on the positive middle strain eigenvalue, critical `L^3` concentration, stochastic back-to-label area distortion, or an equivalent Navier–Stokes-specific functional—not from another rescaling of the existing energy/core inequalities.
+
+### Literature anchors for the stopping boundary
+
+- G. Seregin, *A certain necessary condition of potential blow up for Navier-Stokes equations*, arXiv:1104.3615.
+- T. Tao, *Quantitative bounds for critically bounded solutions to the Navier-Stokes equations*, arXiv:1908.04958.
+- E. Miller, *A regularity criterion for the Navier-Stokes equation involving only the middle eigenvalue of the strain tensor*, arXiv:1710.05569.
+- E. Miller, *Finite-time blowup for a Navier-Stokes model equation for the self-amplification of strain*, arXiv:1910.05415.
+- G. Seregin, *On potential Type II blowups for the Navier-Stokes equations*, arXiv:2606.29468.

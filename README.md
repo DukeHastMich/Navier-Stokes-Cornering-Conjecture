@@ -94,3 +94,11 @@ For an exact aligned coherent-tube reduction, stretching changes core width and 
 If circulation growth is instead produced by mergers, the added signed flux must be recruited from elsewhere; splitting and re-merging the same flux cannot multiply it. Under explicit isolated/coherent donor assumptions, a smooth bounded-gradient initial field cannot preload an infinite comparable donor reservoir in bounded volume.
 
 The surviving mechanism is therefore no longer an isolated vortex tube. It is a dense non-isolated multiscale cluster with repeated flux recruitment/reconnection and sub-core gradient creation. See `docs/checkpoints/checkpoint_91_94_STATUS.md`.
+
+## Final adversarial checkpoint for the current proof route: 95–98
+
+The Kelvin-gradient argument was stress-tested one more time instead of being promoted prematurely to a no-go theorem. A local heat-step diffusion calculation shows that order-one circulation transfer over one parent nonlinear time can use a layer with `h/delta ~ Re^-1/2` and local `Re ~ sqrt(Re_parent)`. Iterating this produces a formal square-root Reynolds hierarchy that reaches the direct `delta/Re` ruler in only `O(log log Re)` intermediate levels, while the standard reduced energy/dissipation/time proxies remain dominated by the outer scale.
+
+This weakens the strongest interpretation of checkpoint 93 and establishes a clean stopping boundary for the present strategy. The repository now treats the “failure to corner” program as a completed adversarial study of coherent self-collapse mechanisms, **not** as a proof of global Navier–Stokes regularity. The surviving adversary is an unbounded, dense, non-isolated Type-II cascade, and further progress requires a genuinely new scale-critical PDE estimate rather than another rearrangement of the existing core/energy scaling.
+
+See `docs/checkpoints/checkpoint_95_98_STATUS.md`.

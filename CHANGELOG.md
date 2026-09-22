@@ -20,3 +20,11 @@ The full derivational narrative is in `docs/RESEARCH_NOTE.md`; the audit trail i
 - Added a Kelvin-law gradient trap: O(1) circulation amplification on one nonlinear time requires a vorticity-gradient ruler `ell/delta=O(1/Re)` and an O(`Re^2`) amplitude escalation to turn that ruler into the next high-Re generation.
 - Added merger/recruitment accounting and a conditional isolated-donor packing lemma.
 - Updated the research conclusion: the checkpoint-88 `Gamma_n=m^n` cascade cannot be interpreted as free same-tube stretching; it must be realized by a highly non-isolated viscous/reconnection mechanism.
+
+## Checkpoints 95–98 — final adversarial audit
+
+- Replaced the one-step `delta/Re` interpretation of the Kelvin gradient layer with an exact heat-step diffusion audit.
+- Found the diffusion-compatible scaling `h/delta ~ Re^-1/2`, `Re_h ~ Re^1/2` for order-one circulation transfer over one parent nonlinear time.
+- Built the recursive square-root Reynolds ladder `Re -> sqrt(Re) -> Re^(1/4) -> ...`, reaching the direct `delta/Re` ruler in only `O(log log Re)` levels.
+- Verified that standard reduced energy/dissipation/impulse/time proxies remain dominated by the outer scale.
+- Marked the present cornering/core/circulation proof strategy as analytically exhausted at the unbounded Type-II critical regime; future progress requires a new full-PDE critical estimate.

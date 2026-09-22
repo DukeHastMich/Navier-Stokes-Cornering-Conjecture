@@ -1,0 +1,18 @@
+Checkpoint 95 - diffusion-compatible Kelvin layer
+
+Heat-step sanity model: Q(tau)=A sqrt(nu tau/pi) per unit boundary length.
+For DeltaGamma~Gamma, L~delta, tau~delta^2/Gamma:
+  h/delta ~ Re^{-1/2}
+  DeltaOmega/Omega_parent ~ sqrt(pi) Re^{1/2}  (for unit order constants)
+  Re_layer ~ sqrt(pi) Re^{1/2}.
+
+This is an adversarial correction to an over-strong reading of checkpoint 93.
+The ell~delta/Re layer is what follows if the vorticity jump is artificially limited to the parent amplitude.
+If the layer is allowed to carry the larger diffusion-compatible jump needed to persist over one parent nonlinear time,
+its thickness is delta/sqrt(Re) and its own circulation Reynolds number is O(sqrt(Re)), not O(1/Re).
+Thus the Kelvin gradient trap does not by itself make the transfer layer viscous roadkill.
+
+Re=10: h/delta=0.3162, jump/Omega=5.605, Re_layer=5.605, transfer/Gamma=1.000000000000
+Re=100: h/delta=0.1, jump/Omega=17.72, Re_layer=17.72, transfer/Gamma=1.000000000000
+Re=10000: h/delta=0.01, jump/Omega=177.2, Re_layer=177.2, transfer/Gamma=1.000000000000
+Re=100000000: h/delta=0.0001, jump/Omega=1.772e+04, Re_layer=1.772e+04, transfer/Gamma=1.000000000000

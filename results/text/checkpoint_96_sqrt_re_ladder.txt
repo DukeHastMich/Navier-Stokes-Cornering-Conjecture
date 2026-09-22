@@ -1,0 +1,21 @@
+Checkpoint 96 - nested square-root Reynolds ladder
+
+R0=1e+02: levels_to_Re<=2 = 3, final Re=1.77828, final delta/delta0=0.0177828, asymptotic delta0/R0=0.01
+  100 -> 10 -> 3.162 -> 1.778
+R0=1e+04: levels_to_Re<=2 = 4, final Re=1.77828, final delta/delta0=0.000177828, asymptotic delta0/R0=0.0001
+  1e+04 -> 100 -> 10 -> 3.162 -> 1.778
+R0=1e+08: levels_to_Re<=2 = 5, final Re=1.77828, final delta/delta0=1.77828e-08, asymptotic delta0/R0=1e-08
+  1e+08 -> 1e+04 -> 100 -> 10 -> 3.162 -> 1.778
+R0=1e+16: levels_to_Re<=2 = 6, final Re=1.77828, final delta/delta0=1.77828e-16, asymptotic delta0/R0=1e-16
+  1e+16 -> 1e+08 -> 1e+04 -> 100 -> 10 -> 3.162 -> 1.778
+
+Exact recursion identities:
+  Re_{j+1}=sqrt(Re_j)
+  delta_{j+1}=delta_j/sqrt(Re_j)
+  Omega_{j+1}/Omega_j=sqrt(Re_j)=Re_{j+1}
+  tau_{j+1}/tau_j=1/sqrt(Re_j)
+  Eproxy_{j+1}/Eproxy_j=Re_j^{-3/2}
+  Dproxy_{j+1}/Dproxy_j=Re_j^{-1}.
+
+As j increases, delta_j -> delta0/Re0 while Re_j -> 1. The direct delta/Re gradient ruler can therefore be resolved into only O(log log Re) diffusion-compatible intermediate layers.
+This does not construct the geometry or prove that the layers can self-organize. It shows that a one-step low-Re objection is not a contradiction: there is a formally consistent multiscale bridge with rapidly decreasing time/energy proxies.

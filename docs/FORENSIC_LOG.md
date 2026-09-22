@@ -758,3 +758,58 @@ Artifacts:
 - `src/checkpoint_94_merger_reservoir.py`
 - corresponding text/CSV outputs
 - `docs/checkpoints/checkpoint_91_94_STATUS.md`
+
+---
+
+## 2026-09-22 — Checkpoints 95–98: final adversarial audit / route boundary
+
+**User instruction:** continue and try to put the problem to bed.
+
+### Checkpoint 95
+
+Revisited checkpoint 93 rather than assuming its strongest interpretation. Used the exact 1-D heat-step diffusion flux
+
+`Q(tau) = A sqrt(nu tau / pi)`
+
+to test a layer that survives for a full parent nonlinear time. Result: an order-one circulation transfer can use a layer with `h/delta ~ Re^-1/2`, vorticity jump `~sqrt(Re)` times the parent amplitude, and local `Re_h~sqrt(Re)`. Therefore the earlier `delta/Re`, `Re_h~1/Re` picture is conditional on inherited parent amplitude and is not a universal circulation-transfer mechanism.
+
+Created:
+- `src/checkpoint_95_diffusive_kelvin_layer.py`
+- `data/csv/checkpoint_95_diffusive_kelvin_layer.csv`
+- `results/text/checkpoint_95_diffusive_kelvin_layer.txt`
+
+### Checkpoint 96
+
+Iterated the diffusion-compatible scaling:
+
+`Re_{j+1}=sqrt(Re_j)`, `delta_{j+1}=delta_j/sqrt(Re_j)`.
+
+Derived `Re_j=Re_0^(2^-j)` and `delta_j=delta_0 Re_0^{-(1-2^-j)}`. The direct `delta/Re` ruler can be reached through only `O(log log Re)` intermediate layers in the formal scaling model.
+
+Created:
+- `src/checkpoint_96_sqrt_re_ladder.py`
+- `data/csv/checkpoint_96_sqrt_re_ladder.csv`
+- `results/text/checkpoint_96_sqrt_re_ladder.txt`
+
+### Checkpoint 97
+
+Audited reduced energy, dissipation, impulse, and nonlinear-time proxies over the square-root hierarchy. All sums are dominated by the outer level; the helper ladder introduces no new divergent critical budget. This is a failed-obstruction result, not a blowup construction.
+
+Created:
+- `src/checkpoint_97_critical_cost_audit.py`
+- `data/csv/checkpoint_97_critical_cost_audit.csv`
+- `results/text/checkpoint_97_critical_cost_audit.txt`
+
+### Checkpoint 98
+
+Declared a principled stopping boundary for the current proof route. The coherent cornering/finite-core program eliminates or strongly obstructs several bounded renormalized classes but does not control unbounded Type-II critical amplitude. Cross-checked this boundary against Seregin `L^3` blowup necessity, Tao quantitative critical bounds, Miller's middle-strain criterion/model blowup, and current Type-II work.
+
+Created:
+- `src/checkpoint_98_route_boundary.py`
+- `data/csv/checkpoint_98_route_boundary.csv`
+- `results/text/checkpoint_98_route_boundary.txt`
+- `docs/checkpoints/checkpoint_95_98_STATUS.md`
+
+### Decision
+
+The “failure to corner” route is **not a proof of global regularity**. It is now marked analytically exhausted at the critical Type-II boundary. Future work should resume only if a genuinely new full-PDE critical estimate is introduced. The original geometric intuition remains useful and substantially supported for coherent self-closing mechanisms, but not universalized to all unforced 3-D Navier–Stokes flows.

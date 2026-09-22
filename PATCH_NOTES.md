@@ -1,17 +1,15 @@
-# Checkpoint 91–94 update
+# Checkpoint 95–98 update
 
-Commit: `3300d07 Checkpoint 91-94: constrain circulation amplification`
+This delta performs a final adversarial audit of the Kelvin-gradient/circulation route.
 
-This delta attacks the remaining circulation-amplifying Type-II corridor.
+Key result: checkpoint 93's `delta/Re` layer is a valid inherited-amplitude estimate, but it is not a universal circulation-transfer layer. An exact heat-step diffusion calculation gives a competing layer with
 
-Key additions:
+- `h/delta ~ Re^-1/2`,
+- vorticity jump `~Re^1/2` times the parent amplitude,
+- local `Re_h ~ Re^1/2`.
 
-- exact coherent parallel-tube circulation conservation under stretching/diffusion;
-- nested one-sign circulation gate;
-- viscous Kelvin gradient trap showing O(1) circulation growth on one nonlinear time needs a `delta/Re` gradient layer;
-- merger/recruitment accounting and a conditional isolated-donor packing lemma;
-- updated research notebook, findings, README, changelog, and forensic log.
+Iterating this relation gives a short square-root hierarchy `Re, sqrt(Re), Re^(1/4), ...` that formally bridges the parent scale to the `delta/Re` ruler without creating a new divergent reduced energy/time budget.
 
-Main conclusion: `Gamma_{n+1}>Gamma_n` cannot be treated as a free same-tube stretching parameter. A genuine realization must either create extremely thin, fast-diffusing gradient layers or recruit signed flux through dense non-isolated/reconnection geometry.
+The research program is therefore marked at a principled stopping boundary: the geometric cornering/finite-core arguments substantially constrain coherent self-collapse, but they do not eliminate the remaining unbounded critical Type-II regime. Closing that regime requires a genuinely new Navier–Stokes critical estimate.
 
-This remains a conditional narrowing result, not a Navier–Stokes regularity proof.
+This update **does not claim a proof of global regularity or a construction of blowup**.

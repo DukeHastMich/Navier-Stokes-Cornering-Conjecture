@@ -4162,3 +4162,237 @@ This is a sharper statement than the earlier search for temporal periodicity. A 
 ## Updated status
 
 The corrected numerics no longer show the toy closed relay escaping by a resolved shrinking local ruler while still collapsing. The next adversarial target is therefore not another finite-dimensional periodic relay. It is a Type-II mechanism capable of driving \(Re_\delta\) or \(A_\delta\) to infinity, or abandoning coherent-vortex-tube geometry altogether.
+
+# CHECKPOINT 84 — The two escape variables collapse to a product gate
+
+Checkpoint 83 left two coherent-tube escape variables,
+
+\[
+Re_\delta=\frac{\Gamma_\delta}{\nu},
+\qquad
+A_\delta=\frac{(\sigma-2\gamma)\delta^2}{\Gamma_\delta},
+\]
+
+inside the local core comparison
+
+\[
+\frac{dy}{ds}\ge \frac{c_\nu}{Re_\delta}-A_\delta y,
+\qquad
+ y=\frac{a^2}{\delta^2}.
+\]
+
+They are not independent once the core is actually trying to become thinner relative to the active geometry. If
+
+\[
+\frac{dy}{ds}\le0,
+\]
+
+then necessarily
+
+\[
+0\ge \frac{c_\nu}{Re_\delta}-A_\delta y,
+\]
+
+hence
+
+\[
+\boxed{A_\delta Re_\delta y\ge c_\nu.}
+\]
+
+Equivalently,
+
+\[
+\boxed{A_\delta Re_\delta\ge\frac{c_\nu}{y}}
+\]
+
+and, after substituting the definitions,
+
+\[
+\boxed{\frac{(\sigma-2\gamma)a^2}{\nu}\ge c_\nu.}
+\]
+
+Thus if
+
+\[
+\frac a\delta\to0
+\]
+
+through intervals on which the relative core is nonincreasing, the product
+
+\[
+A_\delta Re_\delta
+\]
+
+must diverge at least as fast as
+
+\[
+\frac{\delta^2}{a^2}.
+\]
+
+This is a useful reduction. The coherent-core escape is not “large normalized strain *or* large circulation” in an unconstrained sense. The flow must generate enough **core-scale strain Reynolds number** to keep pace with diffusion.
+
+For the illustrative second-moment coefficient `c_nu=4`, the minimum product required at
+
+\[
+y=10^{-1},10^{-2},\ldots,10^{-6}
+\]
+
+is
+
+\[
+40,400,4000,\ldots,4\times10^6.
+\]
+
+This is still a conditional core-model statement, not a full-PDE estimate.
+
+# CHECKPOINT 85 — Remote pusher scaling and the new-ruler dichotomy
+
+Suppose the positive axial strain needed by the target core is supplied by another coherent vortex structure a distance `d` away, with a Biot–Savart scaling bound of the schematic form
+
+\[
+\sigma_s\lesssim C\frac{\Gamma_s}{d^2}.
+\]
+
+Combining this with the core-scale requirement
+
+\[
+\frac{\sigma_s a^2}{\nu}\gtrsim c_\nu
+\]
+
+gives
+
+\[
+\boxed{
+Re_s=\frac{\Gamma_s}{\nu}
+\gtrsim
+\frac{c_\nu}{C}\left(\frac d a\right)^2.
+}
+\]
+
+Therefore a source which remains at the outer active scale
+
+\[
+d\sim\delta
+\]
+
+while
+
+\[
+a/\delta\to0
+\]
+
+must make its scale-critical circulation grow like
+
+\[
+Re_s\gtrsim \frac1y.
+\]
+
+The other option is to move the source inward until
+
+\[
+d=O(a).
+\]
+
+But then the source has entered the core scale. The old outer ruler `delta` is no longer the correct scale for the interaction; the analysis must be renormalized on the newly generated smaller ruler.
+
+This converts the large-`A_delta` escape into a more geometric dichotomy:
+
+1. **critical amplitude escape:** the circulation/amplitude grows without bound at the active scale; or
+2. **renormalization escape:** a new smaller interaction scale is created, and the same question restarts there.
+
+Under the coherent single-scale estimate
+
+\[
+U_\delta\sim\frac{\Gamma_\delta}{\delta},
+\]
+
+a blob occupying order `delta^3` has local critical size
+
+\[
+\|u\|_{L^3(B_\delta)}\sim U_\delta\delta\sim\Gamma_\delta.
+\]
+
+Thus unbounded `Re_delta` is the reduced-model version of unbounded scale-critical velocity amplitude. This is consistent with the rigorous full-PDE result of Seregin (2012): a genuine finite-time blowup must satisfy
+
+\[
+\lim_{t\uparrow T}\|u(t)\|_{L^3(\mathbb R^3)}=\infty.
+\]
+
+Reference: G. Seregin, *A Certain Necessary Condition of Potential Blow up for Navier-Stokes Equations*, Comm. Math. Phys. 312 (2012), 833–845, DOI `10.1007/s00220-011-1391-x`, arXiv:1104.3615.
+
+This connection does not prove that `Re_delta` and the global `L^3` norm are equivalent for arbitrary multiscale flows. It identifies where the present geometric program meets a known necessary critical-norm escape.
+
+# CHECKPOINT 86 — Instrumenting the resolved relay with the escape gate
+
+The reach-safe relay from checkpoints 80–82 was instrumented more aggressively.
+
+The physical local ruler is
+
+\[
+\delta_{\rm phys}=R\,\delta_Z,
+\]
+
+and in the normalized scale time the physical local shrink rate becomes
+
+\[
+\widehat\gamma
+=
+-\frac{d}{ds}\log\delta_{\rm phys}
+=
+-\left(\rho+\frac{d}{ds}\log\delta_Z\right).
+\]
+
+The diagnostic then evaluates
+
+\[
+A_\delta=(\widehat\sigma-2\widehat\gamma)\delta_Z^2
+\]
+
+under the filament normalization `Gamma=1`.
+
+Three choices of available stretching were distinguished:
+
+1. stretching exactly at the point or pair defining the reach;
+2. the best stretching within two reach lengths of that local ruler;
+3. the strongest stretching anywhere on the closed filament.
+
+This separation matters because it directly tests the **outsourcing loophole**.
+
+A resolution/core sweep gave:
+
+\[
+(N,a)=(256,.05),\ (320,.04),\ (384,.03).
+\]
+
+The relay/contraction failures remained near
+
+\[
+s\approx0.443,\quad0.428,\quad0.368.
+\]
+
+Restricting attention to pre-failure intervals in which the *physical local reach itself* was shrinking, the median finite Reynolds number required by the best stretching within `2 delta` was approximately
+
+\[
+4511,\quad5850,\quad5462,
+\]
+
+respectively, for the illustrative `c_nu=4` core model.
+
+These are **not physical predictions**. The coefficient, core equation, regularized kernel, and reach definition are all part of the reduced model. The useful qualitative observation is different:
+
+> The point/pair actually defining the shrinking local ruler generally has a worse strain balance than other parts of the loop. The dangerous positive stretching is imported from nearby or remote geometry rather than produced by the local closing mechanism itself.
+
+At the coarser two resolutions the global maximum positive stretching typically lay many local reach lengths away from the active ruler; at the finest tested case the location statistics changed substantially. Therefore the distance statistic is not claimed to be numerically converged. The robust conclusion retained is only that allowing nonlocal stretching improves the gate, exactly as predicted by the earlier analytic loophole.
+
+## Status after checkpoint 86
+
+The project has now pushed the coherent-tube argument to a familiar hard boundary:
+
+- bounded renormalized coherent geometry is insufficient for blowup;
+- making the relative core vanish requires an unbounded scale-invariant core-strain product;
+- a remote pusher either needs diverging critical circulation/amplitude or must descend to the core scale, creating a new ruler;
+- the reduced relay continues to lose its collapsing cyclic state rather than discovering such an escape over the tested range.
+
+What remains is recognizably Type-II territory: a cascade whose critical amplitude becomes unbounded, whose active scale repeatedly changes, or whose vortex-tube description fails. This is not a global-regularity proof.
+
+A current literature anchor for the Type-II side is G. Seregin, *On potential Type II blowups for the Navier-Stokes equations*, arXiv:2606.29468 (2026), which studies potential Type-II scenarios using Euler rescaling and Liouville-type arguments.

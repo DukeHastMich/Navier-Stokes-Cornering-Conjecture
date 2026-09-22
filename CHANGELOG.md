@@ -8,4 +8,6 @@
 - **71–77** — renormalized `Z`-space relay, core sweeps, early local-reach attempt.
 - **78–83** — corrected reach diagnostic, resolution tests, geometry search, resolved relay/core sweeps.
 
+- **84–86** — collapsed the `A_delta`/`Re_delta` escape into a product gate, derived remote-pusher scaling, and instrumented the resolved relay to measure local versus outsourced stretching.
+
 The full derivational narrative is in `docs/RESEARCH_NOTE.md`; the audit trail is in `docs/FORENSIC_LOG.md`.

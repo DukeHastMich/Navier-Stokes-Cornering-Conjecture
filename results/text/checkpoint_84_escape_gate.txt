@@ -1,0 +1,31 @@
+Checkpoint 84 - local-scale escape gate on the resolved closed relay
+Toy regularized Biot-Savart filament plus an overlaid coherent-core inequality; NOT full Navier-Stokes.
+N=320, regularization/core=0.04, ds=0.0015, smax=0.9, c_nu=4.0
+
+Definitions:
+  delta = reach proxy = min(curvature radius, half non-neighbor separation).
+  gamma_hat = gamma R^2/Gamma = -(rho + d log(delta_z)/ds).
+  A_delta = (sigma_local - 2 gamma_hat) delta_z^2 (Gamma=1 normalization).
+  y = (core/delta_z)^2. Core comparison gives y_s >= c_nu/Re - A_delta y.
+  Therefore a necessary instantaneous condition for y to be nonincreasing is A_delta*Re*y >= c_nu.
+
+first relay/contraction failure s=0.4275
+at failure: rho=-0.0057072559, mincyc=-0.00020220186, reach=0.16047197, sigma_local=-0.0064417363
+            gamma_hat=-0.34533529, A_delta=0.01761975, y=0.0621329, Re_required=3653.7484
+pre-failure finite Re_required: min=14.473245, median=5963.7617, max=108498.27
+Re=100: pre-failure max(A Re y)=27.637202; fraction >= c_nu=0.0345
+Re=1000: pre-failure max(A Re y)=276.37202; fraction >= c_nu=0.0345
+Re=4000: pre-failure max(A Re y)=1105.4881; fraction >= c_nu=0.1379
+Re=10000: pre-failure max(A Re y)=2763.7202; fraction >= c_nu=0.3793
+
+pre-failure rows with physical local reach shrinking (gamma_hat>0): 25
+  local: positive fraction=0.0000; min/median/max=-0.0205945/-0.0068096972/-0.00076527086
+  near2: positive fraction=0.8800; min/median/max=-0.0064931475/0.0098767104/0.01683848
+  near4: positive fraction=0.8800; min/median/max=-0.0064931475/0.0098767104/0.01683848
+  p95-global: positive fraction=0.8800; min/median/max=-0.0060469063/0.0098477471/0.016940272
+  max-global: positive fraction=1.0000; min/median/max=0.0033459977/0.016177576/0.023075424
+  distance from active ruler to global alpha_max in reach units: median=9.81044, min=9.25405, max=10.0307
+
+Interpretation:
+  This does not evolve a Navier-Stokes vortex core. It asks whether the measured local strain/contraction history would even pass the necessary coherent-core gate.
+  The gate collapses the two apparent escape variables A_delta and Re_delta into their product: if y -> 0 while y is decreasing, A_delta Re_delta must diverge at least like c_nu/y.

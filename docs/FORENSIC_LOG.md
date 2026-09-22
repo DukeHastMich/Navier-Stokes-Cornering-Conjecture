@@ -632,3 +632,46 @@ No global regularity proof. Corrected numerical evidence is stronger than the su
 - `checkpoint_81_resolved_zrelay.py/.txt/.csv`
 - `checkpoint_82_resolved_core_sweep.csv/.txt`
 - `checkpoint_78_83_STATUS.md`
+
+## CHECKPOINTS 84–86 — escape-variable reduction (2026-09-22)
+
+### Analytic gate
+Starting from `y_s >= c_nu/Re_delta - A_delta y`, observed that whenever the relative core ratio `y=a^2/delta^2` is nonincreasing, a necessary condition is
+
+`A_delta Re_delta y >= c_nu`.
+
+Therefore `A_delta` and `Re_delta` are not independent escape variables. If `y -> 0` while continuing to decrease, their product must diverge at least like `1/y`. Equivalent physical form:
+
+`(sigma - 2 gamma) a^2 / nu >= c_nu`.
+
+### Remote pusher
+For schematic source strain `sigma <= C Gamma_s/d^2`, the core gate yields
+
+`Re_s >= (c_nu/C)(d/a)^2`.
+
+Thus a pusher that remains at the outer scale while `a/delta -> 0` needs diverging scale-critical circulation. If it approaches to `d=O(a)`, it has generated a new active scale and the renormalization must restart there.
+
+### Critical norm connection
+Under a coherent single-scale heuristic `U_delta ~ Gamma_delta/delta`, local `L3` size is `~Gamma_delta`. This was explicitly marked as heuristic. Literature check: Seregin 2012 rigorously proves that a finite-time 3-D Navier-Stokes blowup requires `||u(t)||_L3 -> infinity` (CMP 312, DOI 10.1007/s00220-011-1391-x; arXiv:1104.3615). Recent Type-II anchor: Seregin arXiv:2606.29468 (2026).
+
+### Numerical gate instrumentation
+Added `checkpoint_84_escape_gate.py` and a resolution/core sweep `checkpoint_86_escape_gate_sweep.py` on the corrected reach-safe relay. Reconstructed physical local reach shrink in normalized time and compared stretching available:
+- exactly at the point/pair defining reach,
+- within two reach lengths,
+- globally on the loop.
+
+The local controller typically has a poorer strain balance; allowing nonlocal stretching substantially improves the gate. This directly exhibits the internal-outsourcing loophole rather than removing it.
+
+For N/core `(256,.05)`, `(320,.04)`, `(384,.03)`, relay failure occurred at approximately `s=.4425,.4275,.3675`. In the illustrative `c_nu=4` core overlay, the median Reynolds number required by the best stretch within `2 delta`, restricted to times of physical local shrink before relay failure, was about `4511, 5850, 5462`.
+
+These values are model diagnostics only, not physical threshold predictions. The distance from the active ruler to the global maximum stretching point was not converged across resolution and is not retained as a theorem-like conclusion.
+
+### Status
+No proof claimed. The remaining coherent mechanism has been reduced to either unbounded critical amplitude/circulation, repeated creation of a smaller ruler, or loss of coherent-tube geometry. This is essentially the Type-II/unbounded-critical-norm boundary of the open PDE problem.
+
+Artifacts:
+- `src/checkpoint_84_escape_gate.py`
+- `src/checkpoint_85_escape_scaling.py`
+- `src/checkpoint_86_escape_gate_sweep.py`
+- corresponding CSV/text outputs
+- `docs/checkpoints/checkpoint_84_86_STATUS.md`

@@ -50,7 +50,9 @@ The work progressively ruled out several naive mechanisms without proving global
 4. A local pair interaction that actually closes a near-aligned gap is anti-stretching in the reduced filament asymptotic; amplification must therefore be supplied nonlocally.
 5. Closed multi-segment relays can temporarily outsource stretching internally, so “a closed vortex can never self-amplify” is false.
 6. In the tested relays, contraction fails before runaway amplification; adding finite-core dynamics produces a positive relative-core floor for bounded renormalized geometry at finite circulation Reynolds number.
-7. The remaining escape route is a non-self-similar, multiscale mechanism in which a scale-critical renormalized quantity itself becomes unbounded or the coherent-tube description fails.
+7. The local coherent-core inequality sharpens the remaining escape: while the relative core thickness `y=a²/δ²` is decreasing, the product `A_δ Re_δ` must grow at least like `1/y`; the two apparent escape variables are therefore not independent.
+8. In the resolved relay, stretching at the local shrinking ruler is weaker than stretching available elsewhere on the loop. The dangerous mechanism is consequently an internally outsourced, multiscale strain transfer rather than a purely local self-collapse.
+9. The remaining full-PDE route is a Type-II/unbounded-critical-amplitude cascade, repeated creation of a smaller ruler, or loss of coherent-tube geometry.
 
 See [FINDINGS.md](FINDINGS.md) for the qualified version of every item.
 
@@ -61,3 +63,13 @@ An early local-reach diagnostic in the `checkpoint_74` family was later found to
 ## Scope
 
 These programs are reduced models, asymptotic checks, and numerical experiments. They are not DNS of the full three-dimensional Navier–Stokes PDE and should not be represented as such. Their purpose is to attack candidate singular mechanisms, expose incorrect intuitions quickly, and formulate sharper analytic targets.
+
+## Latest incremental checkpoint: 84–86
+
+The newest run derives the necessary coherent-core gate
+
+\[
+A_\delta Re_\delta\,\frac{a^2}{\delta^2}\ge c_\nu
+\]
+
+whenever the relative core thickness is actually decreasing. A remote pusher at distance `d` therefore needs, schematically, `Re_source ≳ (d/a)^2`; if it avoids that amplitude growth by moving to `d=O(a)`, then `a` has become the new renormalization scale. See `docs/checkpoints/checkpoint_84_86_STATUS.md`.

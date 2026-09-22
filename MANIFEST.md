@@ -1,6 +1,6 @@
-# Manifest
+# Initial Release Manifest
 
-SHA-256 inventory of the packaged research snapshot.
+SHA-256 inventory of the packaged initial research snapshot at commit `22ce932`. Later incremental commits are tracked by Git and are intentionally not folded back into this frozen release manifest.
 
 | File | Bytes | SHA-256 |
 |---|---:|---|

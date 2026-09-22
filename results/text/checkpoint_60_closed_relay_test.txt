@@ -1,0 +1,23 @@
+Closed four-arc regularized Biot-Savart relay test
+NOT a Navier-Stokes simulation or proof.
+
+N=80, core=0.15, dt=0.01, TMAX=1.5
+Initial cyclic stretch rates: [0.04430088 0.04022682 0.06687026 0.05891911]
+Initial d(Rg^2)/dt: -0.14597584
+Initial L/Rg: 10.34215695
+Initial u_rms: 0.37516464
+Initial turnover estimate Rg/u_rms: 2.66549638
+
+First failure of [all cyclic alpha>0 AND global contraction]: t=1.21000000
+Cyclic rates at failure: [0.02678957 0.0590878  0.07744326 0.06300508]
+d(Rg^2)/dt at failure: 0.00073775
+L/Rg at failure: 12.47726285
+
+Integrated cyclic log-stretch before failure: [0.0394934  0.06455057 0.09142119 0.06577171]
+Corresponding multiplicative gains: [1.04028363 1.06667952 1.09573042 1.06798288]
+L/Rg growth before failure: 20.40156086%
+
+Interpretation: a single closed filament CAN transiently sustain a four-link internal
+stretching relay while contracting. In this optimized low-mode example the relay
+does not remain a collapsing state: shape complexity grows and contraction stalls/
+reverses before large multiplicative cyclic gain is accumulated.

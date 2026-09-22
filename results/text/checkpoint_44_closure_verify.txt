@@ -1,0 +1,6 @@
+normal compression n^T S n = -2*a
+direction evolution P S t = Matrix([[0], [0], [0]])
+tangent stretching t^T S t = a
+ring center axial velocity = Gamma/(2*R)
+ring center axial derivative = 0
+ring center axial second derivative = -3*Gamma/(2*R**3)

@@ -1,0 +1,9 @@
+Checkpoint 73: Z-space coherent-core sweep
+Toy regularized Biot-Savart filament, normalized Rg=1. NOT Navier-Stokes.
+N=80, ds=0.0015, smax=1.2
+
+eps      rho0       first expand    first core>=reach   min rho      min reach
+0.010  -0.175707      0.67500             nan       -0.185836   0.016307
+0.020  -0.167114      0.67350         0.99000       -0.172487   0.016492
+0.030  -0.156372      0.67650         0.81750       -0.158617   0.013925
+0.035  -0.150830      0.68250         0.78000       -0.152149   0.002340

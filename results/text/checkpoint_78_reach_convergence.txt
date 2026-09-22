@@ -1,0 +1,5 @@
+Checkpoint 78 - reach convergence test
+Toy regularized filament; NOT Navier-Stokes. eps=0.01, smax=2.0.
+{'N': 80, 'ex': 3, 'first_expand': 0.675, 'first_overlap': None, 'min_reach': np.float64(0.012988433979269343), 'min_reach_s': 1.635, 'min_rc': np.float64(0.14982357978050528), 'min_hs': np.float64(0.012988433979269343), 'elapsed': 3.0662784576416016}
+{'N': 120, 'ex': 4, 'first_expand': 0.51, 'first_overlap': 0.75, 'min_reach': np.float64(0.005527721663527743), 'min_reach_s': 0.75, 'min_rc': np.float64(0.05274252875124506), 'min_hs': np.float64(0.005527721663527743), 'elapsed': 5.788141489028931}
+{'N': 160, 'ex': 6, 'first_expand': 0.48, 'first_overlap': 0.645, 'min_reach': np.float64(0.0022717326431568492), 'min_reach_s': 1.185, 'min_rc': np.float64(0.14627657333537175), 'min_hs': np.float64(0.0022717326431568492), 'elapsed': 9.881595849990845}

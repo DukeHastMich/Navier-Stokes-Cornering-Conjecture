@@ -1,0 +1,55 @@
+Checkpoint 67 - finite-core ratio phase table
+Model: R^2dot=-2 c_g Gamma; bdot=-c_s Gamma b/R^2 + 4 nu; y=b/R^2.
+tau=-ln(R^2/R0^2): dy/dtau=2/(c_g Re_Gamma)+(1-lambda)y, lambda=c_s/(2c_g).
+For lambda>1: y*=2/[c_g Re_Gamma (lambda-1)], so a/R -> sqrt(y*) > 0 at finite Re.
+For lambda<=1: y does not approach zero; it grows (linearly at lambda=1, exponentially for lambda<1).
+Illustrative normalization c_g=0.5 (2 c_g=1).
+
+Re_Gamma=100
+  lambda=0.80: no positive attracting floor; y grows, not ->0
+  lambda=1.00: no positive attracting floor; y grows, not ->0
+  lambda=1.25: y*=0.16, (a/R)*=0.4
+  lambda=1.50: y*=0.08, (a/R)*=0.28284271
+  lambda=2.00: y*=0.04, (a/R)*=0.2
+  lambda=4.00: y*=0.013333333, (a/R)*=0.11547005
+
+Re_Gamma=1000
+  lambda=0.80: no positive attracting floor; y grows, not ->0
+  lambda=1.00: no positive attracting floor; y grows, not ->0
+  lambda=1.25: y*=0.016, (a/R)*=0.12649111
+  lambda=1.50: y*=0.008, (a/R)*=0.089442719
+  lambda=2.00: y*=0.004, (a/R)*=0.063245553
+  lambda=4.00: y*=0.0013333333, (a/R)*=0.036514837
+
+Re_Gamma=4000
+  lambda=0.80: no positive attracting floor; y grows, not ->0
+  lambda=1.00: no positive attracting floor; y grows, not ->0
+  lambda=1.25: y*=0.004, (a/R)*=0.063245553
+  lambda=1.50: y*=0.002, (a/R)*=0.04472136
+  lambda=2.00: y*=0.001, (a/R)*=0.031622777
+  lambda=4.00: y*=0.00033333333, (a/R)*=0.018257419
+
+Re_Gamma=10000
+  lambda=0.80: no positive attracting floor; y grows, not ->0
+  lambda=1.00: no positive attracting floor; y grows, not ->0
+  lambda=1.25: y*=0.0016, (a/R)*=0.04
+  lambda=1.50: y*=0.0008, (a/R)*=0.028284271
+  lambda=2.00: y*=0.0004, (a/R)*=0.02
+  lambda=4.00: y*=0.00013333333, (a/R)*=0.011547005
+
+Re_Gamma=1000000
+  lambda=0.80: no positive attracting floor; y grows, not ->0
+  lambda=1.00: no positive attracting floor; y grows, not ->0
+  lambda=1.25: y*=1.6e-05, (a/R)*=0.004
+  lambda=1.50: y*=8e-06, (a/R)*=0.0028284271
+  lambda=2.00: y*=4e-06, (a/R)*=0.002
+  lambda=4.00: y*=1.3333333e-06, (a/R)*=0.0011547005
+
+Cascade example Re=4000, lambda=2.0, q=0.5, y0=0.0225:
+  n0:a/R=0.15000; n1:a/R=0.07984; n2:a/R=0.04841; n3:a/R=0.03655; n4:a/R=0.03292; n5:a/R=0.03195; n6:a/R=0.03171; n7:a/R=0.03164; n8:a/R=0.03163; n9:a/R=0.03162; n10:a/R=0.03162; n11:a/R=0.03162
+
+Cascade example Re=1000, lambda=2.0, q=0.5, y0=0.0225:
+  n0:a/R=0.15000; n1:a/R=0.09287; n2:a/R=0.07181; n3:a/R=0.06549; n4:a/R=0.06381; n5:a/R=0.06339; n6:a/R=0.06328; n7:a/R=0.06325; n8:a/R=0.06325; n9:a/R=0.06325; n10:a/R=0.06325; n11:a/R=0.06325
+
+Cascade example Re=4000, lambda=1.5, q=0.5, y0=0.0225:
+  n0:a/R=0.15000; n1:a/R=0.11068; n2:a/R=0.08441; n3:a/R=0.06755; n4:a/R=0.05728; n5:a/R=0.05139; n6:a/R=0.04817; n7:a/R=0.04648; n8:a/R=0.04561; n9:a/R=0.04517; n10:a/R=0.04494; n11:a/R=0.04483

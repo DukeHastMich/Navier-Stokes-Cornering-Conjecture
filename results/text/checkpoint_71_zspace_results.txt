@@ -1,0 +1,34 @@
+Checkpoint 71: renormalized Z-space closed-filament relay
+Toy regularized Biot-Savart filament model; NOT full Navier-Stokes.
+N=80, eps=a/R=0.15, ds=0.005, smax=30.0, reparam_every=5
+
+initial rho=-0.072987918; final rho=0.227267326
+mean rho all=0.162228893; mean rho last half=0.176403478
+fraction rho<0 all=0.0366; last half=0.0000
+cumulative int rho ds to smax=4.87112125 (negative would indicate net scale contraction in this gauge)
+L initial=10.3421569; final=48.2658159
+cyc initial=[0.044301 0.040227 0.06687  0.058919]
+cyc final=[0.077752 0.043929 0.078887 0.048961]
+late descriptor speed mean=17.8752351; min=4.4287593
+
+Best nontrivial descriptor recurrences (standardized distance, s_i, s_j, |ds|):
+0.720412, 8.45, 9.5, 1.05
+0.720412, 9.5, 8.45, 1.05
+0.751282, 10.65, 24.7, 14.05
+0.751282, 24.7, 10.65, 14.05
+0.755239, 9.55, 8.45, 1.1
+0.768674, 8.4, 9.5, 1.1
+0.77675, 24.75, 10.65, 14.1
+0.824521, 9.6, 8.45, 1.15
+0.854805, 10.7, 24.75, 14.05
+0.879172, 9.45, 8.4, 1.05
+
+Strongest PC1 autocorrelation peaks (corr, lag frames, period s):
+0.0947245, 278, 13.9
+0.0946284, 276, 13.8
+-0.933818, 592, 29.6
+-0.958317, 582, 29.1
+-0.976756, 573, 28.65
+-0.976942, 596, 29.8
+-0.977409, 575, 28.75
+-1.26695, 522, 26.1

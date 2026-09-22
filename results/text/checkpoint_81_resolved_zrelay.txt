@@ -1,0 +1,14 @@
+Checkpoint 81 - better-resolved Z-space closed relay
+Toy regularized Biot-Savart filament; NOT Navier-Stokes.
+N=256, core=0.05, ds=0.0015, smax=2.0
+initial row=[ 0.         -0.01527424  0.12068382  0.02898416  0.09193444  0.03022786
+  0.10084286  0.15081609  0.10084286 10.47407295  0.04091435  0.49582095
+  0.81828695]
+first global expansion s=0.45
+first relay/contraction fail s=0.45
+first core>=reach s=1.695
+min reach=0.00449861787 at s=1.995; core/reach=11.1145; rho=0.183747
+final row=[1.99500000e+00 1.83746878e-01 1.63000330e+00 1.00673616e-02
+ 3.34166957e-02 2.95120729e-01 4.49861787e-03 4.00693111e-02
+ 4.49861787e-03 1.35621157e+01 5.29770145e-02 1.11145248e+01
+ 1.05954029e+00]

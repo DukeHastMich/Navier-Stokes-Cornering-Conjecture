@@ -1,0 +1,14 @@
+div u = 0
+curl u = Matrix([[0, 0, -M*y + Omega0]])
+S =
+⎡ -s     -M⋅y            ⎤
+⎢ ───    ─────      M⋅z  ⎥
+⎢  2       2             ⎥
+⎢                        ⎥
+⎢-M⋅y          s         ⎥
+⎢─────  -M⋅x - ─     0   ⎥
+⎢  2           2         ⎥
+⎢                        ⎥
+⎣ M⋅z      0      M⋅x + s⎦
+alpha(0) = s
+(e_z . grad S)e_z at 0 = Matrix([[M, 0, 0]])

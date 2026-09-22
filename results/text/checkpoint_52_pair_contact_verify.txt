@@ -1,0 +1,19 @@
+alpha0 integrand = 3*G*d*s*sin(2*theta)/(8*pi*(d**2 + s**2)**(5/2))
+d(alpha)/d kn at 0 = 3*G*s**3*(6*d**2 + s**2)*sin(2*theta)/(16*pi*(d**2 + s**2)**(7/2))
+d(alpha)/d kb at 0 = 3*G*d*s**2*(3*sin(theta)**2 - 2)/(8*pi*(d**2 + s**2)**(5/2))
+symmetric integral alpha0 = 0
+symmetric integral alpha_kn = 0
+symmetric integral alpha_kb = G*(3*sin(theta)**2 - 2)/(4*pi*d)
+
+normal velocity u.n straight = 0
+d(u.n)/d kn at 0 = 0
+d(u.n)/d kb at 0 = -G*s**2/(8*pi*(d**2 + s**2)**(3/2))
+finite-window integral d(u.n)/d kb = G*L/(4*pi*sqrt(L**2 + d**2)) - G*asinh(L/d)/(4*pi)
+
+angle where 3 sin^2(theta)-2 changes sign = asin(sqrt(6)/3)
+degrees = 54.7356103172
+
+aligned-pair local model:
+d_dot = G*Q*(k1 - k2)/(4*pi)
+alpha1+alpha2 = G*(k1 - k2)/(2*pi*d)
+(alpha1+alpha2) / d_dot = 2/(Q*d)

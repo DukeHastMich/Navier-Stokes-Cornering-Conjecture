@@ -1,0 +1,49 @@
+Checkpoint 66 - finite-core closed-relay augmentation
+Reduced coherent-core model; NOT Navier-Stokes DNS and NOT a proof.
+b_j' = -sigma_j b_j + 4 nu; source Biot-Savart regularization radius a_j=sqrt(b_j).
+Gamma normalized to 1, so Re_Gamma=1/nu. Initial a=0.15, Rg=1.
+
+nu=0, Re_Gamma=inf
+  first relay/contraction failure: 1.105
+  first max(a/Rg)>=0.25: None
+  minimum Rg^2 at t=1.102500: 0.91845335
+  a/Rg at minimum Rg^2: [0.142149 0.16102  0.149342 0.140019]
+  total axial stretch at min Rg^2: [0.282042 0.082625 0.082286 0.385487]
+  min cyclic link at min Rg^2: 0.02693252
+  final a/Rg: [0.112953 0.13925  0.138323 0.105894]
+
+nu=0.0001, Re_Gamma=10000.0
+  first relay/contraction failure: 1.1075
+  first max(a/Rg)>=0.25: None
+  minimum Rg^2 at t=1.107500: 0.91845619
+  a/Rg at minimum Rg^2: [0.143628 0.162486 0.150846 0.141558]
+  total axial stretch at min Rg^2: [0.280235 0.083562 0.082276 0.379509]
+  min cyclic link at min Rg^2: 0.02702237
+  final a/Rg: [0.116315 0.142168 0.141253 0.109599]
+
+nu=0.00025, Re_Gamma=4000.0
+  first relay/contraction failure: 1.115
+  first max(a/Rg)>=0.25: None
+  minimum Rg^2 at t=1.115000: 0.91846671
+  a/Rg at minimum Rg^2: [0.145844 0.164682 0.153098 0.143865]
+  total axial stretch at min Rg^2: [0.277512 0.084949 0.082253 0.370776]
+  min cyclic link at min Rg^2: 0.02714853
+  final a/Rg: [0.12122  0.14644  0.145539 0.114957]
+
+nu=0.001, Re_Gamma=1000.0
+  first relay/contraction failure: 1.145
+  first max(a/Rg)>=0.25: None
+  minimum Rg^2 at t=1.142500: 0.91861362
+  a/Rg at minimum Rg^2: [0.156956 0.175571 0.164236 0.15547 ]
+  total axial stretch at min Rg^2: [0.262421 0.08907  0.082166 0.329092]
+  min cyclic link at min Rg^2: 0.02767152
+  final a/Rg: [0.143527 0.166125 0.165278 0.138873]
+
+nu=0.01, Re_Gamma=100.0
+  first relay/contraction failure: 1.3275000000000001
+  first max(a/Rg)>=0.25: 0.8375
+  minimum Rg^2 at t=1.327500: 0.92465638
+  a/Rg at minimum Rg^2: [0.271343 0.287273 0.276684 0.273298]
+  total axial stretch at min Rg^2: [0.138462 0.082572 0.071822 0.118184]
+  min cyclic link at min Rg^2: 0.02324166
+  final a/Rg: [0.306114 0.32044  0.316796 0.309925]

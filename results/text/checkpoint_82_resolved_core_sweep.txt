@@ -1,0 +1,11 @@
+Checkpoint 82 — resolved-core relay sweep
+Toy regularized Biot–Savart filament model; NOT Navier–Stokes and NOT a proof.
+
+A new initial closed-filament relay was selected with substantially larger geometric reach than the earlier checkpoint-60 shape. All four cyclic stretching links are initially positive and the radius-of-gyration gauge is initially contracting.
+
+Runs:
+N=256, core=0.05: initial rho=-0.01527424, min cyclic=0.02898416, reach=0.10084286, spacing=0.04091435. First loss of [global contraction AND all cyclic links positive] at s=0.450. At that instant reach=0.14219525 > core=0.05.
+N=320, core=0.04: initial rho=-0.01842229, min cyclic=0.02882957, reach=0.10257523, spacing=0.03273941. First failure at s=0.435. Reach at failure=0.16091974 > core=0.04.
+N=384, core=0.03: initial rho=-0.02248579, min cyclic=0.02873001, reach=0.09796966, spacing=0.02728644. First failure at s=0.375. Reach at failure=0.16316817 > core=0.03.
+
+Interpretation: in this better-resolved family, the closed relay loses the ability to remain simultaneously contracting and cyclically stretching before its finite core encounters the local geometric reach. Thinning the regularization/core over this tested range does not reveal a sustained collapsing relay; failure occurs at comparable or earlier normalized time.
